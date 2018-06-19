@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-bind:style="{width: screenWidth}">
     <div class="title">
     <img src="./assets/title_left.png">
     <div>
@@ -20,6 +20,7 @@ export default {
   name: 'App',
   data () {
     return {
+      screenWidth: document.body.scrollWidth + 'px',
       isSubmitted1: false,
       isSubmitted2: false,
       isSubmitted3: false
@@ -27,6 +28,10 @@ export default {
   },
   mounted: function () {
     this.updateLabelStatus(this.$route.path)
+    console.log(document.body.scrollWidth)
+    window.onresize = function temp () {
+      this.screenWidth = document.body.scrollWidth + 'px'
+    }
   },
   methods: {
     switchRoute: function (event, path) {
@@ -59,8 +64,10 @@ export default {
   }
 }
 </script>
-
 <style scoped>
+#app {
+  width:auto;
+}
 .title{
    width: 100%;
 }

@@ -29,7 +29,8 @@
         </tr>
     </table>
 </div>
-  <!-- <p>asdasd</p> -->
+  <div class="content2">
+  </div>
 
   <!-- <div class="appraise">
   </div>
@@ -81,13 +82,14 @@ export default {
 </script>
 
 <style scoped>
+
 .bg{
-  width: 100vw;
-  height: 30.61vw;
+  width: 100%;
+  height: 30.65vw;
   background-image: url(../assets/123.png);
   background-repeat:no-repeat;
   overflow: hidden;
-  background-size:cover;
+  background-size: cover;
 }
 .bigDiv{
   height:100%;
@@ -180,12 +182,8 @@ export default {
   text-align: center;
 }
 .content2{
-  position: relative;
-  background-color: yellow;
-  height:400px;
-  margin:0;
-  padding:0;
-  width:100%;
+  margin-top:680px;
+  height:380px;
 }
 .appraise{
 }
