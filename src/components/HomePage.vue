@@ -1,12 +1,12 @@
 <template>
-  <div>
+<div>
   <div class="bg">
      <div class="bigDiv">
        <p class="big">欢迎来到<br>数思科技有限公司</p>
        <p class="small">游戏美术外包整改方案</p>
      </div>
   </div>
-<div id="content1">
+ <div id="content1">
     <img class="icon" src="../assets/+.jpeg">
     <transition-group name="slide-fade">
     <p v-if="show1" class="font1" :key="1">核心业务</p>
@@ -29,6 +29,8 @@
         </tr>
     </table>
 </div>
+  <!-- <p>asdasd</p> -->
+
   <!-- <div class="appraise">
   </div>
   <div class="partner"></div>
@@ -89,7 +91,7 @@ export default {
 }
 .bigDiv{
   height:100%;
-  left:23%;
+  left:18%;
   bottom:-15%;
   position: relative;
 }
@@ -127,13 +129,13 @@ export default {
   top:40px;
 }
 .icon{
-  left:23%;
+  left:18%;
   padding-top: 8px;
   position: absolute;
 }
 .font1{
   top:-56px;
-  left:27.5%;
+  left:22.5%;
   font-weight:bold;
   position: absolute;
   color:black;
@@ -141,14 +143,14 @@ export default {
 }
 .font2{
   top:80px;
-  left:27.5%;
+  left:22.5%;
   position: absolute;
   color:black;
   font-size: 20px;
   font-style:italic;
 }
 #content1 table{
-  left:23%;
+  left:18%;
   top:190px;
   position: absolute;
 }
@@ -166,18 +168,24 @@ export default {
   font-weight:normal;
 }
 .content1_descTable{
-  left:23%;
+  left:18%;
   padding-top:285px;
   position: absolute;
 }
 .content1_desc{
   width:490px;
   font-size:17px;
-  height:94px;
+  height:145px;
   font-weight:normal;
   text-align: center;
 }
 .content2{
+  position: relative;
+  background-color: yellow;
+  height:400px;
+  margin:0;
+  padding:0;
+  width:100%;
 }
 .appraise{
 }
