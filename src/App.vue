@@ -65,14 +65,22 @@ export default {
    width: 100%;
 }
 .title img{
-  margin-left:3.3%;
-  margin-top:1.3%;
-  margin-bottom:1.3%;
+  margin-left:3.7%;
+  margin-top:1.7%;
+  margin-bottom:1.7%;
 }
 .title div{
   float:right;
-  margin-top:1.3%;
-  margin-right:8%;
+  margin-top:1.7%;
+  margin-right:3%;
+}
+table{
+  border-collapse:collapse;
+}
+th{
+   text-align: right;
+   width:90px;
+   height: auto;
 }
 .label{
   -webkit-touch-callout: none;
@@ -84,7 +92,7 @@ export default {
   color: black;
   background-color: #FFFFFF;
   border: 0px none;
-  font-size: 18px;
+  font-size: 14px;
   outline: none;
 }
 .label:hover{
