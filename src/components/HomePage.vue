@@ -29,25 +29,12 @@
         </tr>
     </table>
 </div>
-</div>
-     <!-- <tr style="width:100%">
-         <th class="content1_table_tr_th" v-for="item in coreDesc" :key="item.id"><p>{{item.desc}}</p></th>
-      </tr>  -->
-  <!-- <img class="bigImg" src="../assets/bbbb.jpg"/> -->
-  <!-- <div class="content1">
+  <!-- <div class="appraise">
   </div>
-
-  <div class="content2">
-  </div>
-  <div class="appraise">
-  </div>
-
   <div class="partner"></div>
-
   <div class="contactus"></div>
-
   <div class="license"></div> -->
-
+</div>
 </template>
 
 <script>
@@ -101,12 +88,13 @@ export default {
   background-size:cover;
 }
 .bigDiv{
-  width:100%;
   height:100%;
-  margin-left:23%;
-  margin-top:9%;
+  left:23%;
+  bottom:-15%;
+  position: relative;
 }
 .big{
+  position: absolute;
   line-height:80px;
   color:white;
   font-size: 80px;
@@ -115,7 +103,7 @@ export default {
   position: absolute;
   color:white;
   font-size: 40px;
-  top:38%;
+  line-height:480px;
 }
 .slide-fade-enter-active {
   transition: all 3.8s ease;
