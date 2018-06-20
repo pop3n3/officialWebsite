@@ -46,10 +46,13 @@
        </tr>
      </table>
   </div>
-
-  <!-- <div class="appraise">
+  <div class="appraise">
+    <div class="appraise_title">客户评价</div>
+    <div class="appraise_desc_div">
+      <span>“</span><p class="appraise_desc">响橙美术在这个项目上做得十分出色，他们在很短的时间内递交了非常高质量的作品给我们。我们期待与响橙的再一次合作。”</p>
+    </div>
   </div>
-  <div class="partner"></div>
+  <!-- <div class="partner"></div>
   <div class="contactus"></div>
   <div class="license"></div> -->
 </div>
@@ -77,6 +80,11 @@ export default {
         {url: '/static/homePage/book.png', id: 1, descleft: 50 + 'px', left: 150 + 'px', title: '高效的团队', desc: '响橙的团队成员们总能在截止日期前完成作品，更重要的是他们经常给互相提出意见和建议，以确保我们能够递交给我们的客户最好的作品。'},
         {url: '/static/homePage/book.png', id: 2, descleft: 50 + 'px', left: 150 + 'px', title: '沟通', desc: '我们深知与客户沟通的重要性，我们尽最大的努力去了解客户的需求，从而使我们能够更完美的达到客户的需求。'},
         {url: '/static/homePage/book.png', id: 3, descleft: 50 + 'px', left: 150 + 'px', title: '价格', desc: '虽然我们的报价相较低于其他公司，但请放心这完全不会影响到我们作品的质量。'}
+      ],
+      appraiseText: [
+        {jop: '美术经理', company: '中国手游', desc: '响橙美术在这个项目上做得十分出色，他们在很短的时间内递交了非常高质量的作品给我们。我们期待与响橙的再一次合作。”'},
+        {jop: '研发副总', company: '玩蟹科技', desc: '响橙美术一直是我们很好的研发伙伴，我们已经合作了两年多了，他们总是能够完美地完成我们交给他们的项目。响橙的成员们都很有天赋以及十分专业，高效的同时又保证了质量。”'},
+        {jop: '美术总监', company: '天马时空科技', desc: '我们和响橙美术合作了很多个项目，他们的专业性以及积极性总是能把项目做到超乎我们想象的好。我们非常乐意在我们的下个项目中也与响橙合作。”'}
       ]
     }
   },
@@ -232,6 +240,34 @@ export default {
   background-position: center center;
 }
 .appraise{
+  float: left;
+  width: 100%;
+  height: 400px;
+  border:0;
+  border-bottom:10px solid yellow;
+  margin:0;
+  padding:0;
+}
+.appraise_title{
+  font-size: 64px;
+  font-weight:bold;
+  text-align: center;
+  line-height: 64px;
+  margin-top:60px;
+  margin-bottom:60px;
+  background-color: red;
+  font-family:"Microsoft YaHei";
+}
+.appraise_desc_div{
+  margin: auto;
+  width:60%;
+  height:200px;
+  background-color: green;
+}
+.appraise_desc{
+  margin:0;
+  padding:0;
+  text-align: left;
 }
 .partner{
 }
