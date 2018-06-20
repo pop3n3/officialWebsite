@@ -6,13 +6,14 @@
        <p class="small">游戏美术外包整改方案</p>
      </div>
   </div>
- <div id="content1">
+<div id="content1">
+    <div class="content1Div">
     <img class="icon" src="../assets/+.jpeg">
     <transition-group name="slide-fade">
     <p v-if="show1" class="font1" :key="1">核心业务</p>
     <p v-if="show1" class="font2" :key="2">保持初心 精益求精</p>
     </transition-group>
-    <table>
+    <table cellpadding="0" cellspacing="0">
       <transition name="fade">
       <tr v-if="show2">
       <th v-for="item in coreitems" :key="item.id"><img v-bind:src="item.url"></th>
@@ -22,14 +23,16 @@
          <th v-for="item in coreitems" :key="item.id"><p class="tr_th_p">{{item.desc}}</p></th>
       </tr>
     </table>
-    <table class="content1_descTable">
+    <table cellpadding="0" cellspacing="0">
         <tr>
         <th><p class="content1_desc">{{coreDesc[0].desc}}</p></th>
         <th><p class="content1_desc">{{coreDesc[1].desc}}</p></th>
         </tr>
     </table>
+    </div>
 </div>
   <div class="content2">
+    asdasd
   </div>
 
   <!-- <div class="appraise">
@@ -93,21 +96,22 @@ export default {
 }
 .bigDiv{
   height:100%;
-  left:18%;
-  bottom:-15%;
-  position: relative;
+  width:950px;
+  margin: auto;
 }
 .big{
-  position: absolute;
+  width: 100%;
+  float: left;
   line-height:80px;
   color:white;
   font-size: 80px;
 }
 .small{
-  position: absolute;
+  width: 100%;
+  margin-top: -65px;
+  float: left;
   color:white;
   font-size: 40px;
-  line-height:480px;
 }
 .slide-fade-enter-active {
   transition: all 3.8s ease;
@@ -127,63 +131,54 @@ export default {
   opacity: 0;
 }
 #content1{
-  position: relative;
-  top:40px;
+  width:100%;
+}
+.content1Div{
+  margin: auto;
+  width: 950px;
+  /* height:540px; */
 }
 .icon{
-  left:18%;
-  padding-top: 8px;
-  position: absolute;
+  float:left;
 }
 .font1{
-  top:-56px;
-  left:22.5%;
   font-weight:bold;
-  position: absolute;
   color:black;
   font-size: 55px;
 }
 .font2{
-  top:80px;
-  left:22.5%;
-  position: absolute;
+  float: left;
+  padding-left:64px;
+  margin-top:-34px;
   color:black;
   font-size: 20px;
   font-style:italic;
 }
-#content1 table{
-  left:18%;
-  top:190px;
-  position: absolute;
-}
+
 #content1 table th{
   padding-right:50px;
   text-align: center;
 }
 #content1 table img{
-  width:220px;
-  height:220px;
+  width:200px;
+  height:200px;
 }
 .tr_th_p{
   font-size: 14px;
   font-style:italic;
   font-weight:normal;
 }
-.content1_descTable{
-  left:18%;
-  padding-top:285px;
-  position: absolute;
-}
+
 .content1_desc{
-  width:490px;
-  font-size:17px;
-  height:145px;
+  width:450px;
+  font-size:20px;
+  height:142px;
   font-weight:normal;
   text-align: center;
 }
 .content2{
-  margin-top:680px;
-  height:380px;
+  width:100%;
+  margin: auto;
 }
 .appraise{
 }
