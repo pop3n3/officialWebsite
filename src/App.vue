@@ -28,10 +28,7 @@ export default {
   },
   mounted: function () {
     this.updateLabelStatus(this.$route.path)
-    console.log(document.body.scrollWidth)
-    window.onresize = function temp () {
-      this.screenWidth = document.body.scrollWidth + 'px'
-    }
+    this.screenWidth = document.body.scrollWidth
   },
   methods: {
     switchRoute: function (event, path) {

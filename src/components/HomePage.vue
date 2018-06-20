@@ -32,7 +32,19 @@
     </div>
 </div>
   <div class="content2">
-    asdasd
+     <table cellpadding="0" cellspacing="0">
+      <tr>
+         <th v-for="item in radiusDesc" :key="item.id">
+           <div class="rad_div" v-bind:style="{marginLeft:item.left,backgroundImage:'url(' + item.url + ')'}"></div>
+           <p class="content2_title" v-bind:style="{marginLeft:item.left}">{{item.title}}</p>
+         </th>
+       </tr>
+       <tr>
+        <th v-for="item in radiusDesc" :key="item.id">
+         <p class="content2_desc"  v-bind:style="{marginLeft:item.descleft}">{{item.desc}}</p>
+         </th>
+       </tr>
+     </table>
   </div>
 
   <!-- <div class="appraise">
@@ -59,6 +71,12 @@ export default {
       coreDesc: [
         {desc: '我们的团队规模达150多人，其中超过80%的员工来自国内一线顶级研商，平均从业年龄超过6年以上，在职人员均具备丰富的成功项目制作经验和项目管理经验。'},
         {desc: '我们的服务内容具体包括：角色原画、场景原画、UI、ICON、2D宣传图、2D宣传动画、3D角色模型、3D场景模型、3D地编、3D拼关、次时代模型、3渲2角色、3渲2场景，游戏动作，游戏特效。'}
+      ],
+      radiusDesc: [
+        {url: '/static/homePage/book.png', id: 0, descleft: 0 + 'px', left: 50 + 'px', title: '质大于量', desc: '响橙美术一直把质量放在第一位，目前响橙参与制作的成功项目已超过150例，合作服务的大中型游戏研发商超过70家，签订长期合作框架协议的企业超过30家。'},
+        {url: '/static/homePage/book.png', id: 1, descleft: 50 + 'px', left: 150 + 'px', title: '高效的团队', desc: '响橙的团队成员们总能在截止日期前完成作品，更重要的是他们经常给互相提出意见和建议，以确保我们能够递交给我们的客户最好的作品。'},
+        {url: '/static/homePage/book.png', id: 2, descleft: 50 + 'px', left: 150 + 'px', title: '沟通', desc: '我们深知与客户沟通的重要性，我们尽最大的努力去了解客户的需求，从而使我们能够更完美的达到客户的需求。'},
+        {url: '/static/homePage/book.png', id: 3, descleft: 50 + 'px', left: 150 + 'px', title: '价格', desc: '虽然我们的报价相较低于其他公司，但请放心这完全不会影响到我们作品的质量。'}
       ]
     }
   },
@@ -136,10 +154,10 @@ export default {
 .content1Div{
   margin: auto;
   width: 950px;
-  /* height:540px; */
 }
 .icon{
   float:left;
+  padding-top:8px;
 }
 .font1{
   font-weight:bold;
@@ -154,7 +172,6 @@ export default {
   font-size: 20px;
   font-style:italic;
 }
-
 #content1 table th{
   padding-right:50px;
   text-align: center;
@@ -171,14 +188,48 @@ export default {
 
 .content1_desc{
   width:450px;
-  font-size:20px;
+  font-size:16px;
   height:142px;
   font-weight:normal;
   text-align: center;
 }
 .content2{
   width:100%;
-  margin: auto;
+  height: 450px;
+  background-color:yellowgreen;
+}
+.content2 table{
+ margin: auto;
+ width: 950px;
+ height: 100%;
+}
+.content2 table tr{
+ float: left;
+}
+.content2_title{
+ font-size: 15px;
+ padding-top:15px;
+ font-weight: normal;
+ text-align: center;
+}
+.content2_desc{
+ margin-top:-8px;
+ font-size: 15px;
+ font-weight: normal;
+ text-align: left;
+ width:200px;
+ height:128px;
+}
+
+.rad_div{
+  margin-top:60px;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  background-repeat:no-repeat;
+  background-position: center center;
 }
 .appraise{
 }
