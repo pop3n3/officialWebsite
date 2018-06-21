@@ -30,6 +30,20 @@
     </tr>
     </table>
     <p style="text-align:center"><font size="10"> <b>2D作品展示</b></font></p>
+
+    <table class="oneshow4" align="center">
+    <tr>
+      <img class="oneshowa"
+          v-preview="img.url1"
+          v-bind:src="img.url"
+          :alt="img.title"
+          :key="index"
+          preview-title-enable="true"
+          preview-nav-enable="true">
+    </tr>
+    </table>
+
+
     <table class="oneshow4" align="center">
     <tr style="float:left" v-for="(img,index) in imgs" :key="index">
       <img class="oneshowa"
