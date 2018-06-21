@@ -50,7 +50,7 @@
   <div class="appraise">
     <div class="appraise_title">客户评价</div>
     <div class="appraise_desc_div">
-      <span>“</span><p class="appraise_desc">响橙美术在这个项目上做得十分出色，他们在很短的时间内递交了非常高质量的作品给我们。我们期待与响橙的再一次合作。”</p>
+      <p class="appraise_desc"><span>“</span>响橙美术在这个项目上做得十分出色，他们在很短的时间内递交了非常高质量的作品给我们。我们期待与响橙的再一次合作。”</p>
     </div>
   </div>
   <!-- <div class="partner"></div>
@@ -253,18 +253,12 @@ export default {
 }
 .rad_div{
   margin-top:60px;
-  /* background-color: white; */
-  /* border-radius: 50px;
-  -moz-border-radius: 50px;
-  background-repeat:no-repeat;
-  background-position: center center; */
 }
 .appraise{
-  float: left;
   width: 100%;
-  height: 400px;
+  height: 600px;
   border:0;
-  border-bottom:10px solid yellow;
+  border-bottom:4px solid #7c8fff;
   margin:0;
   padding:0;
 }
@@ -274,20 +268,18 @@ export default {
   text-align: center;
   line-height: 64px;
   margin-top:60px;
-  margin-bottom:60px;
-  background-color: red;
-  font-family:"Microsoft YaHei";
+  margin-bottom:90px;
 }
 .appraise_desc_div{
-  margin: auto;
-  width:60%;
+  margin:auto;
+  width:860px;
   height:200px;
   background-color: green;
 }
 .appraise_desc{
+  text-align:left;
   margin:0;
   padding:0;
-  text-align: left;
 }
 .partner{
 }
