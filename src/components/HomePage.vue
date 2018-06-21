@@ -1,10 +1,11 @@
 <template>
 <div>
   <div class="bg">
-     <div class="bigDiv">
-       <p class="big">欢迎来到<br>数思科技有限公司</p>
-       <p class="small">游戏美术外包整改方案</p>
-     </div>
+    <div class="stencil">.
+       <div class="bgDiv">
+       <p class="big">欢迎来到<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;典致网络<span class="small">&nbsp;&nbsp;游戏美术外包整改方案</span></p>
+       </div>
+    </div>
   </div>
 <div id="content1">
     <div class="content1Div">
@@ -13,7 +14,7 @@
     <p v-if="show1" class="font1" :key="1">核心业务</p>
     <p v-if="show1" class="font2" :key="2">保持初心 精益求精</p>
     </transition-group>
-    <table cellpadding="0" cellspacing="0">
+    <table class="content1Table" cellpadding="0" cellspacing="0">
       <transition name="fade">
       <tr v-if="show2">
       <th v-for="item in coreitems" :key="item.id"><img v-bind:src="item.url"></th>
@@ -35,13 +36,13 @@
      <table cellpadding="0" cellspacing="0">
       <tr>
          <th v-for="item in radiusDesc" :key="item.id">
-           <div class="rad_div" v-bind:style="{marginLeft:item.left,backgroundImage:'url(' + item.url + ')'}"></div>
+           <img class="rad_div" v-bind:style="{marginLeft:item.left}" v-bind:src="item.url">
            <p class="content2_title" v-bind:style="{marginLeft:item.left}">{{item.title}}</p>
          </th>
        </tr>
        <tr>
         <th v-for="item in radiusDesc" :key="item.id">
-         <p class="content2_desc"  v-bind:style="{marginLeft:item.descleft}">{{item.desc}}</p>
+         <p class="content2_desc" v-bind:style="{marginLeft:item.descleft}">{{item.desc}}</p>
          </th>
        </tr>
      </table>
@@ -66,20 +67,20 @@ export default {
       show1: false,
       show2: false,
       coreitems: [
-        {url: '/static/homePage/test1.jpg', id: 0, desc: '宣传画'},
-        {url: '/static/homePage/test1.jpg', id: 1, desc: '角色设计'},
-        {url: '/static/homePage/test1.jpg', id: 2, desc: '3D角色建模以及贴图'},
-        {url: '/static/homePage/test1.jpg', id: 3, desc: '3D场景建模以及贴图'}
+        {url: '/static/homePage/sy_1.png', id: 0, desc: '宣传画'},
+        {url: '/static/homePage/sy_2.png', id: 1, desc: '角色设计'},
+        {url: '/static/homePage/sy_3.png', id: 2, desc: '3D角色建模以及贴图'},
+        {url: '/static/homePage/sy_4.png', id: 3, desc: '3D场景建模以及贴图'}
       ],
       coreDesc: [
-        {desc: '我们的团队规模达150多人，其中超过80%的员工来自国内一线顶级研商，平均从业年龄超过6年以上，在职人员均具备丰富的成功项目制作经验和项目管理经验。'},
-        {desc: '我们的服务内容具体包括：角色原画、场景原画、UI、ICON、2D宣传图、2D宣传动画、3D角色模型、3D场景模型、3D地编、3D拼关、次时代模型、3渲2角色、3渲2场景，游戏动作，游戏特效。'}
+        {desc: '我们的设计师全部在知名艺术院校受过正规美术教育，精通2D和3D制作软件和工具，帮助消除客户在创造力和市场潜力方面的障碍，递交更多内容，缩短产品问世时间，并对成本进行控制。'},
+        {desc: '提供全方位服务，包括：游戏角色、场景、特效、UI、ICON等设计和游戏2D宣传图、宣传动画 和3D角色模型、3D场景模型、动作设计。'}
       ],
       radiusDesc: [
-        {url: '/static/homePage/book.png', id: 0, descleft: 0 + 'px', left: 50 + 'px', title: '质大于量', desc: '响橙美术一直把质量放在第一位，目前响橙参与制作的成功项目已超过150例，合作服务的大中型游戏研发商超过70家，签订长期合作框架协议的企业超过30家。'},
-        {url: '/static/homePage/book.png', id: 1, descleft: 50 + 'px', left: 150 + 'px', title: '高效的团队', desc: '响橙的团队成员们总能在截止日期前完成作品，更重要的是他们经常给互相提出意见和建议，以确保我们能够递交给我们的客户最好的作品。'},
-        {url: '/static/homePage/book.png', id: 2, descleft: 50 + 'px', left: 150 + 'px', title: '沟通', desc: '我们深知与客户沟通的重要性，我们尽最大的努力去了解客户的需求，从而使我们能够更完美的达到客户的需求。'},
-        {url: '/static/homePage/book.png', id: 3, descleft: 50 + 'px', left: 150 + 'px', title: '价格', desc: '虽然我们的报价相较低于其他公司，但请放心这完全不会影响到我们作品的质量。'}
+        {url: '/static/homePage/sy_zl.png', id: 0, descleft: 40 + 'px', left: 96 + 'px', title: '质量', desc: '精益求精的品质要求。多重检查保障质量达到最好。'},
+        {url: '/static/homePage/sy_td.png', id: 1, descleft: 40 + 'px', left: 152 + 'px', title: '团队', desc: '每个项目都有一个专项小组，确保在周期内完成工作。'},
+        {url: '/static/homePage/sy_gt.png', id: 2, descleft: 40 + 'px', left: 152 + 'px', title: '沟通', desc: '充分、及时了解客户需求，最大限度满足客户需求。'},
+        {url: '/static/homePage/sy_jg.png', id: 3, descleft: 40 + 'px', left: 152 + 'px', title: '价格', desc: '专业化的水准，给你超高性价比。'}
       ],
       appraiseText: [
         {jop: '美术经理', company: '中国手游', desc: '响橙美术在这个项目上做得十分出色，他们在很短的时间内递交了非常高质量的作品给我们。我们期待与响橙的再一次合作。”'},
@@ -100,7 +101,7 @@ export default {
       var hT = scrodiv.offsetTop
       var hH = scrodiv.offsetHeight
       var wH = document.documentElement.clientHeight
-      var wS = window.document.body.scrollTop
+      var wS = window.document.documentElement.scrollTop
       if (wS > (hT + hH * 0.4 - wH)) {
         this.show1 = true
         this.show2 = true
@@ -113,30 +114,41 @@ export default {
 <style scoped>
 .bg{
   width: 100%;
-  height: 30.65vw;
-  background-image: url(../assets/123.png);
+  height: 56.56vw;
+  background-image: url(../assets/homePage/homeBg.jpg);
   background-repeat:no-repeat;
   overflow: hidden;
   background-size: cover;
+  position: relative;
 }
-.bigDiv{
+.stencil{
+  width:100%;
+  height:199px;
+  background-size:100% 100%;
+  background-image: url(../assets/homePage/stencil.png);
+  background-repeat:no-repeat;
+  bottom: 18.3%;
+  position: absolute;
+}
+.bgDiv{
+  position: absolute;
+  top:0;
+  left:50%;
+  margin-left:-508px;
+  width: 1016px;
   height:100%;
-  width:950px;
-  margin: auto;
 }
 .big{
-  width: 100%;
-  float: left;
-  line-height:80px;
+  line-height:82px;
   color:white;
-  font-size: 80px;
+  font-size: 82px;
+  position: absolute;
+  top: 50%;
+  margin-top:-82px;
 }
 .small{
-  width: 100%;
-  margin-top: -65px;
-  float: left;
   color:white;
-  font-size: 40px;
+  font-size: 28px;
 }
 .slide-fade-enter-active {
   transition: all 3.8s ease;
@@ -160,86 +172,92 @@ export default {
 }
 .content1Div{
   margin: auto;
-  width: 950px;
+  width: 1016px;
 }
 .icon{
-  float: left;
+  position: absolute;
   margin-top:50px;
+  margin-left:50px;
 }
 .font1{
-  float: left;
+  position: absolute;
   font-weight:bold;
   color:black;
   font-size: 55px;
-  margin-left:10px;
+  margin-left:114px;
   margin-top:36px;
 }
 .font2{
-  float: left;
-  margin-left:-220px;
+  position: absolute;
+  margin-left:114px;
   margin-top:120px;
   color:black;
-  font-size: 20px;
+  font-size: 18px;
   font-style:italic;
 }
+.content1Table{
+  padding-top:200px;
+}
 #content1 table th{
-  padding-right:50px;
+  padding-left:40px;
   text-align: center;
 }
 #content1 table img{
-  width:200px;
+  width:214px;
   height:200px;
 }
 .tr_th_p{
   font-size: 14px;
+  color: #7b7b7b;
   font-style:italic;
   font-weight:normal;
 }
 
 .content1_desc{
-  width:450px;
-  font-size:16px;
+  width:468px;
+  font-size:17px;
   height:142px;
   font-weight:normal;
   text-align: center;
+  color: #000000;
 }
 .content2{
   width:100%;
-  height: 450px;
-  background-color:yellowgreen;
+  height: 363px;
+  background-color:#7c8fff;
 }
 .content2 table{
  margin: auto;
- width: 950px;
+ width: 1016px;
  height: 100%;
 }
 .content2 table tr{
  float: left;
 }
 .content2_title{
- font-size: 15px;
- padding-top:15px;
+ font-size: 20px;
+ margin-top:17px;
  font-weight: normal;
  text-align: center;
+ color:#000000;
+ margin-bottom:0px;
 }
 .content2_desc{
- margin-top:-8px;
- font-size: 15px;
+ margin-top:17px;
+ margin-bottom:0px;
+ font-size: 16px;
  font-weight: normal;
- text-align: left;
- width:200px;
- height:128px;
+ text-align: center;
+ width:214px;
+ color:#000000;
 }
-
 .rad_div{
   margin-top:60px;
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  border-radius: 50px;
+  /* background-color: white; */
+  /* border-radius: 50px;
   -moz-border-radius: 50px;
   background-repeat:no-repeat;
-  background-position: center center;
+  background-position: center center; */
 }
 .appraise{
   float: left;
