@@ -8,7 +8,7 @@
   </div>
 <div id="content1">
     <div class="content1Div">
-    <img class="icon" src="../assets/+.jpeg">
+    <img class="icon" src="../assets/homePage/black.png">
     <transition-group name="slide-fade">
     <p v-if="show1" class="font1" :key="1">核心业务</p>
     <p v-if="show1" class="font2" :key="2">保持初心 精益求精</p>
@@ -163,17 +163,21 @@ export default {
   width: 950px;
 }
 .icon{
-  float:left;
+  float: left;
+  margin-top:50px;
 }
 .font1{
+  float: left;
   font-weight:bold;
   color:black;
   font-size: 55px;
+  margin-left:10px;
+  margin-top:36px;
 }
 .font2{
   float: left;
-  padding-left:64px;
-  margin-top:-34px;
+  margin-left:-220px;
+  margin-top:120px;
   color:black;
   font-size: 20px;
   font-style:italic;

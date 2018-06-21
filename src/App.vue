@@ -1,7 +1,7 @@
 <template>
   <div id="app" v-bind:style="{width: screenWidth}">
     <div class="title">
-    <img src="./assets/title_left.png">
+    <img src="./assets/homePage/logo.png">
     <div>
     <table border="0">
     <tr>
@@ -70,13 +70,13 @@ export default {
 }
 .title img{
   margin-left:3.7%;
-  margin-top:1.7%;
-  margin-bottom:1.7%;
+  margin-top:1%;
+  margin-bottom:1%;
 }
 .title div{
   float:right;
-  margin-top:1.7%;
-  margin-right:3%;
+  margin-top:1.5%;
+  margin-right:4%;
 }
 table{
   border-collapse:collapse;
@@ -96,7 +96,7 @@ th{
   color: black;
   background-color: #FFFFFF;
   border: 0px none;
-  font-size: 14px;
+  font-size: 20px;
   outline: none;
 }
 .label:hover{
