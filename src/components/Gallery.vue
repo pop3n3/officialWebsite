@@ -9,15 +9,7 @@
       <br>
     </div>
     <table class="oneshow2" align="center">
-    <tr style="float:left" v-for="(img,index) in imgs" :key="index">
-      <img class="oneshowa"
-          v-preview="img.url1"
-          v-bind:src="img.url"
-          :alt="img.title"
-          :key="index"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-    </tr>
+      <img src="../assets/title_left.png">
     </table>
     <table class="oneshow3" align="center" cellspacing="100">
     <tr>
@@ -39,48 +31,14 @@
     </table>
     <p style="text-align:center"><font size="10"> <b>2D作品展示</b></font></p>
     <table class="oneshow4" align="center">
-    <tr>
-      <td><img src="../assets/title_left.png" ></td>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-    </tr>
-    <tr>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-    </tr>
-    <tr>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-    </tr>
-    <tr>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-    </tr>
-    </table>
-    <p style="text-align:center"><font size="10"> <b>3D建模以及贴图作品展示</b></font></p>
-    <table class="oneshow5" align="center" cellspacing="20">
-    <tr>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-    </tr>
-    <tr>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-    </tr>
-    <tr>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-    </tr>
-    <tr>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
-      <td><img src="../assets/title_left.png"></td>
+    <tr style="float:left" v-for="(img,index) in imgs" :key="index">
+      <img class="oneshowa"
+          v-preview="img.url1"
+          v-bind:src="img.url"
+          :alt="img.title"
+          :key="index"
+          preview-title-enable="true"
+          preview-nav-enable="true">
     </tr>
     </table>
   </div>
@@ -94,14 +52,24 @@ export default {
     return {
       imgs: [
         {
-          url: '/static/icon_1.png',
-          url1: '/static/icon_1.png',
+          url: '/static/show/p9.png',
+          url1: '/static/show/p9.png',
           title: 'pic1'
         },
         {
-          url: '/static/icon_1.png',
-          url1: '/static/icon_1.png',
+          url: '/static/show/p3.png',
+          url1: '/static/show/p3.png',
           title: 'pic2'
+        },
+        {
+          url: '/static/show/p11.png',
+          url1: '/static/show/p11.png',
+          title: 'pic3'
+        },
+        {
+          url: '/static/show/p10.png',
+          url1: '/static/show/p10.png',
+          title: 'pic4'
         }
       ]
     }
@@ -115,10 +83,6 @@ export default {
 } */
 .oneshowa{
    background-color: #FFFF00;
-   height: 100px;
-   width: 100px;
-   margin-top:-50;
-   margin-left:-50;
 }
 .oneshow1{
    background-color: #FFFF00;

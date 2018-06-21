@@ -13,6 +13,7 @@
     </div>
     </div>
     <router-view/>
+  <lg-preview></lg-preview>
   </div>
 </template>
 <script>
