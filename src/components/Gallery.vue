@@ -10,7 +10,7 @@
     </div>
     <table class="oneshow2" align="center">
     <tr style="float:left" v-for="(img,index) in imgs" :key="index">
-      <img class="oneshowa" 
+      <img class="oneshowa"
           v-preview="img.url1"
           v-bind:src="img.url"
           :alt="img.title"
