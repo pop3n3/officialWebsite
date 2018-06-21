@@ -111,7 +111,6 @@ export default {
 </script>
 
 <style scoped>
-
 .bg{
   width: 100%;
   height: 30.65vw;
@@ -165,7 +164,6 @@ export default {
 }
 .icon{
   float:left;
-  padding-top:8px;
 }
 .font1{
   font-weight:bold;
