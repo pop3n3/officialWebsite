@@ -10,7 +10,7 @@
     <th class="navTitleTableth"><label :class="{ navTitlelabelVisited: isSubmitted3 }" id="btnGallery" @click="switchRoute($event,'/gallery')" class="navTitlelabel" >作品展示</label></th>
     </tr>
     </table>
-    <div id="navTitleline" :class="{ navTitlelineTransition: isTransition }"></div>
+    <div id="navTitleline" v-bind:class="{ navTitlelineTransition: isTransition }"></div>
     </div>
     </div>
     <router-view/>
@@ -29,8 +29,11 @@ export default {
     }
   },
   mounted: function () {
-    this.isTransition = true
+    this.isTransition = false
     this.updateLabelStatus(this.$route.path)
+    setTimeout(() => {
+      this.isTransition = true
+    }, 20)
   },
   methods: {
     switchRoute: function (event, path) {
@@ -78,6 +81,14 @@ export default {
 }
 </script>
 <style>
+@font-face{
+  font-family:'fzzhengheis-eb-gbregular';
+  src:url('./fonts/_.ttf');
+  src:url('./fonts/_.woff2') format('woff2'),
+  url('./fonts/_.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 #app {
   width:auto;
 }
@@ -108,9 +119,11 @@ export default {
   user-select: none;
   color: #888ba2;
   border: 0px none;
-  font-size: 20px;
   outline: none;
   margin-right:20px;
+  /* font-family:'fzzhengheis-eb-gbregular'; */
+  font-size: 20px;
+  font-weight:normal;
 }
 .navTitlelabel:hover{
   color:#4b59bc;
@@ -130,13 +143,5 @@ export default {
   height:3px;
   margin-top:0px;
   background-color: #4b59bc;
-}
-@font-face{
-  font-family:'fzzhengheis-eb-gbregular';
-  src:url('./fonts/_.ttf');
-  src:url('./fonts/_.woff2') format('woff2'),
-  url('./fonts/_.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 </style>
