@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="background">
   <div class="bg" :style="bgImg">
     <div class="stencil">.
        <div class="bgDiv">
@@ -48,18 +48,36 @@
        </tr>
      </table>
   </div>
-  <div class="appraise">
-    <div class="appraise_title">客户评价</div>
-    <div class="appraise_desc_div">
-      <p class="appraise_desc"><span>“</span>响橙美术在这个项目上做得十分出色，他们在很短的时间内递交了非常高质量的作品给我们。我们期待与响橙的再一次合作。”</p>
+  <div id="appraise">
+    <div class="appraiseTitleDiv">
+    <transition name="slide-fade">
+    <div v-if="show3" class="appraise_title">客户评价</div>
+    </transition >
+    </div>
+  <div class="appraise_desc_div" v-for="item in appraiseText" :key="item.id">
+     <p class="appraise_desc">{{item.desc}}</p>
+      <div class="appraise_cj" v-bind:style="{marginTop:item.top}">
+      <p class="appraise_company">{{item.company}}</p>
+      <p class="appraise_job">{{item.job}}</p>
+      </div>
+   </div>
+  </div>
+  <div id="partner">
+    <transition name="slide-fade">
+    <div v-if="show4">合作伙伴</div>
+    </transition>
+    <transition name="slidefade">
+    <img v-if="show5" src="../assets/homePage/hzhb.png">
+    </transition>
+  </div>
+  <div class="contactus">
+    <div class="container">
+      <img class="icon" src="../assets/homePage/white.png">
+      <p class="title">联系我们</p>
     </div>
   </div>
-  <!-- <div class="partner"></div>
-  <div class="contactus"></div>
-  <div class="license"></div> -->
 </div>
 </template>
-
 <script>
 export default {
   name: 'HomePage',
@@ -70,6 +88,9 @@ export default {
       },
       show1: false,
       show2: false,
+      show3: false,
+      show4: false,
+      show5: false,
       coreitems: [
         {url: '/static/homePage/sy_1.png', id: 0, desc: '宣传画'},
         {url: '/static/homePage/sy_2.png', id: 1, desc: '角色设计'},
@@ -87,9 +108,9 @@ export default {
         {url: '/static/homePage/sy_jg.png', id: 3, descleft: 40 + 'px', left: 152 + 'px', title: '价格', desc: '专业化的水准，给你超高性价比。'}
       ],
       appraiseText: [
-        {jop: '美术经理', company: '中国手游', desc: '响橙美术在这个项目上做得十分出色，他们在很短的时间内递交了非常高质量的作品给我们。我们期待与响橙的再一次合作。”'},
-        {jop: '研发副总', company: '玩蟹科技', desc: '有专人负责对接，沟通起来很高效，专业、高效和团队，质量上很有保障，期待和典致的下次合作。'},
-        {jop: '美术总监', company: '天马时空科技', desc: '与典致合作非常愉快，小伙伴对接项目回馈及时，项目均能按时如约完成。希望明年可以继续合作，一路相伴，携手共进。'}
+        {top: 28 + 'px', id: 0, job: '美术总监', company: '顽皮狗外包对接', desc: '“变革的时代，激烈的竞争，有您的鼎力相助，我们信心满满，愿共同扬帆起航！”'},
+        {top: 0 + 'px', id: 1, job: '美术总监', company: '顽皮狗外包对接', desc: '“有专人负责对接，沟通起来很高效，专业、高效和团队，质量上很有保障，期待和典致的下次合作。”'},
+        {top: 0 + 'px', id: 2, job: '美术总监', company: '顽皮狗外包对接', desc: '“与典致合作非常愉快，小伙伴对接项目回馈及时，项目均能按时如约完成。希望明年可以继续合作，一路相伴，携手共进。”'}
       ]
     }
   },
@@ -101,7 +122,7 @@ export default {
   },
   methods: {
     scrollf: function () {
-      let scrodiv = document.getElementById('content1')
+      var scrodiv = document.getElementById('content1')
       var hT = scrodiv.offsetTop
       var hH = scrodiv.offsetHeight
       var wH = document.documentElement.clientHeight
@@ -112,6 +133,19 @@ export default {
       if (wS > (hT + hH * 0.4 - wH)) {
         this.show1 = true
         this.show2 = true
+      }
+      scrodiv = document.getElementById('appraise')
+      hT = scrodiv.offsetTop
+      hH = scrodiv.offsetHeight
+      if (wS > (hT + hH * 0.4 - wH)) {
+        this.show3 = true
+      }
+      scrodiv = document.getElementById('partner')
+      hT = scrodiv.offsetTop
+      hH = scrodiv.offsetHeight
+      if (wS > (hT + hH * 0.4 - wH)) {
+        this.show4 = true
+        this.show5 = true
       }
     }
   }
@@ -168,7 +202,7 @@ export default {
   margin-left:20px;
 }
 .slide-fade-enter-active {
-  transition: all 3.8s ease;
+  transition: all 1.8s ease;
 }
 .slide-fade-leave-active {
   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
@@ -178,6 +212,19 @@ export default {
   transform: translateX(100px);
   opacity: 0;
 }
+
+.slidefade-enter-active {
+  transition: all 2.8s ease;
+}
+.slidefade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slidefade-enter, .slidefade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(25px);
+  opacity: 0;
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 3.0s;
 }
@@ -195,7 +242,7 @@ export default {
 .icon{
   position: absolute;
   margin-top:50px;
-  margin-left:50px;
+  margin-left:40px;
 }
 .font1{
   font-family:'fzzhengheis-eb-gbregular';
@@ -203,14 +250,14 @@ export default {
   position: absolute;
   color:black;
   font-size: 56px;
-  margin-left:114px;
+  margin-left:100px;
   margin-top:45px;
 }
 .font2{
   font-family:'fzzhengheis-eb-gbregular';
   font-weight:normal;
   position: absolute;
-  margin-left:115px;
+  margin-left:101px;
   margin-top:122px;
   color:#363447;
   font-size: 18px;
@@ -275,37 +322,87 @@ export default {
 .rad_div{
   margin-top:60px;
 }
-.appraise{
+#appraise{
   width: 100%;
-  height: 600px;
   border:0;
   border-bottom:4px solid #7c8fff;
   margin:0;
   padding:0;
+  height: 665px;
+}
+.appraiseTitleDiv{
+  margin-top:60px;
+  height:154px;
 }
 .appraise_title{
+  font-family:'fzzhengheis-eb-gbregular';
+  font-weight: normal;
   font-size: 64px;
-  font-weight:bold;
   text-align: center;
-  line-height: 64px;
-  margin-top:60px;
-  margin-bottom:90px;
 }
 .appraise_desc_div{
   margin:auto;
-  width:860px;
-  height:200px;
-  background-color: green;
+  width:780px;
+  height:157px;
 }
 .appraise_desc{
+  width: 760px;
   text-align:left;
+  font-size:20px;
   margin:0;
   padding:0;
 }
-.partner{
+.appraise_cj{
+  width:141px;
+  float: right;
+}
+.appraise_company{
+  display:table-cell;
+  vertical-align:top;
+  font-size:20px;
+  font-weight: normal;
+}
+.appraise_job{
+  font-size:20px;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  margin:0;
+}
+#partner{
+  width: 100%;
+  margin:0;
+  padding:0;
+  height:460px;
+  text-align: center;
+}
+#partner div{
+  font-family:'fzzhengheis-eb-gbregular';
+  font-weight: normal;
+  font-size: 64px;
+  margin-top:60px;
+  margin-bottom: 70px;
 }
 .contactus{
+  height:390px;
+  background-color: #2d2e36;
 }
-.license{
+.contactus .container{
+  margin: auto;
+  width: 1016px;
+  height:100%;
+  /* background-color: red; */
+}
+.contactus .container .icon{
+  margin-left:40px;
+  margin-top:57px;
+}
+.contactus .container .title{
+  margin-left:104px;
+  padding-top:50px;
+  font-family:'fzzhengheis-eb-gbregular';
+  font-weight: normal;
+  font-size: 64px;
+  color:white;
 }
 </style>
