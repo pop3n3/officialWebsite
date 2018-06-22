@@ -5,9 +5,9 @@
     <div class="navTitleDiv">
     <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-    <th class="navTitleTableth"><label :class="{ navTitlelabelVisited: isSubmitted1 }" id="btnHome" @click="switchRoute($event,'/')" class="navTitlelabel" >首页</label></th>
-    <th class="navTitleTableth"><label :class="{ navTitlelabelVisited: isSubmitted2 }" id="btnAbout" @click="switchRoute($event,'/aboutus')" class="navTitlelabel" >关于我们</label></th>
-    <th class="navTitleTableth"><label :class="{ navTitlelabelVisited: isSubmitted3 }" id="btnGallery" @click="switchRoute($event,'/gallery')" class="navTitlelabel" >作品展示</label></th>
+    <td class="navTitleTabletd"><label :class="{ navTitlelabelVisited: isSubmitted1 }" id="btnHome" @click="switchRoute($event,'/')" class="navTitlelabel" >首页</label></td>
+    <td class="navTitleTabletd"><label :class="{ navTitlelabelVisited: isSubmitted2 }" id="btnAbout" @click="switchRoute($event,'/aboutus')" class="navTitlelabel" >关于我们</label></td>
+    <td class="navTitleTabletd"><label :class="{ navTitlelabelVisited: isSubmitted3 }" id="btnGallery" @click="switchRoute($event,'/gallery')" class="navTitlelabel" >作品展示</label></td>
     </tr>
     </table>
     <div id="navTitleline" v-bind:class="{ navTitlelineTransition: isTransition }"></div>
@@ -105,7 +105,7 @@ export default {
   margin-top:1.5%;
   margin-right:4%;
 }
-.navTitleTableth{
+.navTitleTabletd{
    text-align: left;
    width:auto;
    height: auto;
@@ -121,7 +121,7 @@ export default {
   border: 0px none;
   outline: none;
   margin-right:20px;
-  /* font-family:'fzzhengheis-eb-gbregular'; */
+  font-family:'fzzhengheis-eb-gbregular';
   font-size: 20px;
   font-weight:normal;
 }

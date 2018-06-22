@@ -18,17 +18,17 @@
     <table class="content1Table" cellpadding="0" cellspacing="0">
       <transition name="fade">
       <tr v-if="show2">
-      <th v-for="item in coreitems" :key="item.id"><img v-bind:src="item.url"></th>
+      <td v-for="item in coreitems" :key="item.id"><img v-bind:src="item.url"></td>
       </tr>
       </transition>
       <tr>
-         <th v-for="item in coreitems" :key="item.id"><p class="tr_th_p">{{item.desc}}</p></th>
+         <td v-for="item in coreitems" :key="item.id"><p class="tr_td_p">{{item.desc}}</p></td>
       </tr>
     </table>
     <table cellpadding="0" cellspacing="0">
         <tr>
-        <th><p class="content1_desc">{{coreDesc[0].desc}}</p></th>
-        <th><p class="content1_desc">{{coreDesc[1].desc}}</p></th>
+        <td><p class="content1_desc">{{coreDesc[0].desc}}</p></td>
+        <td><p class="content1_desc">{{coreDesc[1].desc}}</p></td>
         </tr>
     </table>
     </div>
@@ -36,15 +36,15 @@
   <div class="content2">
      <table cellpadding="0" cellspacing="0">
       <tr>
-         <th v-for="item in radiusDesc" :key="item.id">
+         <td v-for="item in radiusDesc" :key="item.id">
            <img class="rad_div" v-bind:style="{marginLeft:item.left}" v-bind:src="item.url">
            <p class="content2_title" v-bind:style="{marginLeft:item.left}">{{item.title}}</p>
-         </th>
+         </td>
        </tr>
        <tr>
-        <th v-for="item in radiusDesc" :key="item.id">
+        <td v-for="item in radiusDesc" :key="item.id">
          <p class="content2_desc" v-bind:style="{marginLeft:item.descleft}">{{item.desc}}</p>
-         </th>
+         </td>
        </tr>
      </table>
   </div>
@@ -198,25 +198,28 @@ export default {
   margin-left:50px;
 }
 .font1{
+  font-family:'fzzhengheis-eb-gbregular';
+  font-weight:normal;
   position: absolute;
-  font-weight:bold;
   color:black;
-  font-size: 55px;
+  font-size: 56px;
   margin-left:114px;
-  margin-top:36px;
+  margin-top:45px;
 }
 .font2{
+  font-family:'fzzhengheis-eb-gbregular';
+  font-weight:normal;
   position: absolute;
-  margin-left:114px;
-  margin-top:120px;
-  color:black;
+  margin-left:115px;
+  margin-top:122px;
+  color:#363447;
   font-size: 18px;
   font-style:italic;
 }
 .content1Table{
   padding-top:200px;
 }
-#content1 table th{
+#content1 table td{
   padding-left:40px;
   text-align: center;
 }
@@ -224,7 +227,7 @@ export default {
   width:214px;
   height:200px;
 }
-.tr_th_p{
+.tr_td_p{
   font-size: 14px;
   color: #7b7b7b;
   font-style:italic;
@@ -252,9 +255,10 @@ export default {
  float: left;
 }
 .content2_title{
+ font-family:'fzzhengheis-eb-gbregular';
+ font-weight: normal;
  font-size: 20px;
  margin-top:17px;
- font-weight: normal;
  text-align: center;
  color:#000000;
  margin-bottom:0px;
