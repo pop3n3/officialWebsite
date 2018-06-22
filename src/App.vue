@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <div class="title">
-    <img src="./assets/homePage/logo.png">
-    <div>
+    <div class="navTitle">
+    <img class="navTitleImg" src="./assets/homePage/logo.png">
+    <div class="navTitleDiv">
     <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-    <th><label :class="{ labelVisited: isSubmitted1 }" id="btnHome" @click="switchRoute($event,'/')" class="label" >首页</label></th>
-    <th><label :class="{ labelVisited: isSubmitted2 }" id="btnAbout" @click="switchRoute($event,'/aboutus')" class="label" >关于我们</label></th>
-    <th><label :class="{ labelVisited: isSubmitted3 }" id="btnGallery" @click="switchRoute($event,'/gallery')" class="label" >作品展示</label></th>
+    <th class="navTitleTableth"><label :class="{ navTitlelabelVisited: isSubmitted1 }" id="btnHome" @click="switchRoute($event,'/')" class="navTitlelabel" >首页</label></th>
+    <th class="navTitleTableth"><label :class="{ navTitlelabelVisited: isSubmitted2 }" id="btnAbout" @click="switchRoute($event,'/aboutus')" class="navTitlelabel" >关于我们</label></th>
+    <th class="navTitleTableth"><label :class="{ navTitlelabelVisited: isSubmitted3 }" id="btnGallery" @click="switchRoute($event,'/gallery')" class="navTitlelabel" >作品展示</label></th>
     </tr>
     </table>
-    <div id="line" :class="{ lineTransition: isTransition }"></div>
+    <div id="navTitleline" :class="{ navTitlelineTransition: isTransition }"></div>
     </div>
     </div>
     <router-view/>
@@ -70,36 +70,36 @@ export default {
         default:
           break
       }
-      let line = document.getElementById('line')
+      let line = document.getElementById('navTitleline')
       line.style.width = lineWidth + 'px'
       line.style.marginLeft = marginLeft + 'px'
     }
   }
 }
 </script>
-<style scoped>
+<style>
 #app {
   width:auto;
 }
-.title{
+.navTitle{
    width: 100%;
 }
-.title img{
+.navTitleImg{
   margin-left:3.7%;
   margin-top:1%;
   margin-bottom:1%;
 }
-.title div{
+.navTitleDiv{
   float:right;
   margin-top:1.5%;
   margin-right:4%;
 }
-th{
+.navTitleTableth{
    text-align: left;
    width:auto;
    height: auto;
 }
-.label{
+.navTitlelabel{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -112,23 +112,31 @@ th{
   outline: none;
   margin-right:20px;
 }
-.label:hover{
+.navTitlelabel:hover{
   color:#4b59bc;
   border: none;
   cursor: hand;
   cursor: pointer;
 }
-.labelVisited{
+.navTitlelabelVisited{
   color: #4b59bc;
 }
-.lineTransition{
+.navTitlelineTransition{
   transition: margin-left 0.3s ;
 }
-#line{
+#navTitleline{
   float: left;
   width:40px;
   height:3px;
   margin-top:0px;
   background-color: #4b59bc;
+}
+@font-face{
+  font-family:'fzzhengheis-eb-gbregular';
+  src:url('./fonts/_.ttf');
+  src:url('./fonts/_.woff2') format('woff2'),
+  url('./fonts/_.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 </style>

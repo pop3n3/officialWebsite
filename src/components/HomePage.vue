@@ -3,7 +3,7 @@
   <div class="bg">
     <div class="stencil">.
        <div class="bgDiv">
-       <p class="big">欢迎来到<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;典致网络<span class="small">&nbsp;&nbsp;游戏美术外包整改方案</span></p>
+       <p class="big">欢迎来到<br>典致网络<span class="small">游戏美术外包整改方案</span></p>
        </div>
     </div>
   </div>
@@ -101,7 +101,10 @@ export default {
       var hT = scrodiv.offsetTop
       var hH = scrodiv.offsetHeight
       var wH = document.documentElement.clientHeight
-      var wS = window.document.documentElement.scrollTop
+      var wS = document.documentElement.scrollTop
+      if (wS === 0) {
+        wS = document.body.scrollTop
+      }
       if (wS > (hT + hH * 0.4 - wH)) {
         this.show1 = true
         this.show2 = true
@@ -139,6 +142,7 @@ export default {
   height:100%;
 }
 .big{
+  font-family:'fzzhengheis-eb-gbregular';
   line-height:82px;
   color:white;
   font-size: 82px;
