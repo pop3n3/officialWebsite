@@ -1,7 +1,7 @@
 <template>
-<div style="background">
-  <div class="bg" :style="bgImg">
-    <div class="stencil">.
+<div>
+  <div id="bgDiv" class="bg" v-bind:style="{backgroundPositionY:posY}">
+    <div class="stencil">
        <div class="bgDiv">
        <p class="big bigPos1">欢迎来到</p>
        <p class="big bigPos2">典致网络<span class="small">游戏美术外包整改方案</span></p>
@@ -83,9 +83,7 @@ export default {
   name: 'HomePage',
   data () {
     return {
-      bgImg: {
-        backgroundImage: 'url(' + ('/static/homePage/homeBg.jpg') + ')'
-      },
+      posY: 0 + '%',
       show1: false,
       show2: false,
       show3: false,
@@ -122,6 +120,7 @@ export default {
   },
   methods: {
     scrollf: function () {
+      let offset = 2
       var scrodiv = document.getElementById('content1')
       var hT = scrodiv.offsetTop
       var hH = scrodiv.offsetHeight
@@ -130,6 +129,13 @@ export default {
       if (wS === 0) {
         wS = document.body.scrollTop
       }
+      var top = wS
+      var bgH = document.getElementById('bgDiv').offsetHeight
+      var y = (top * offset / bgH) * 100
+      if (y > 100) {
+        y = 100
+      }
+      this.posY = y + '%'
       if (wS > (hT + hH * 0.4 - wH)) {
         this.show1 = true
         this.show2 = true
@@ -154,12 +160,13 @@ export default {
 
 <style scoped>
 .bg{
+  background: url('/static/homePage/homeBg.jpg') no-repeat center center;
   width: 100%;
-  height: 56.56vw;
-  background-repeat:no-repeat;
-  overflow: hidden;
+  height: 600px;
   background-size: cover;
-  position: relative;
+  background-position-y:0%;
+    /* overflow: hidden; */
+  /* position: relative; */
 }
 .stencil{
   width:100%;
