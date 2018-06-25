@@ -120,7 +120,7 @@ export default {
   },
   methods: {
     scrollf: function () {
-      let offset = 2
+      let offset = 2.0 * document.documentElement.clientWidth / 1349.0
       var scrodiv = document.getElementById('content1')
       var hT = scrodiv.offsetTop
       var hH = scrodiv.offsetHeight
@@ -162,8 +162,8 @@ export default {
 .bg{
   background: url('/static/homePage/homeBg.jpg') no-repeat center center;
   width: 100%;
-  height: 600px;
-  background-size: cover;
+  height: 800px;
+  background-size:100% 56.56vw;
   background-position-y:0%;
     /* overflow: hidden; */
   /* position: relative; */
