@@ -118,8 +118,10 @@ export default {
         backgroundPositionY: 100 + '%'
       },
       styleBgHeight: {
-        backgroundAttachment: 'scroll'
+        height: 550 + 'px'
       },
+      bgMaxHeight: 550.0,
+      lastST: 0,
       show1: false,
       show2: false,
       show3: false,
@@ -150,6 +152,12 @@ export default {
   },
   mounted: function () {
     this.scrollf()
+    this.styleBgY = {
+      backgroundPositionY: 100 + '%'
+    }
+    this.styleBgHeight = {
+      height: 550 + 'px'
+    }
     window.addEventListener('scroll', () => {
       this.scrollf()
     })
@@ -166,27 +174,30 @@ export default {
         wS = document.body.scrollTop
       }
       var top = wS
-      var bgH = document.getElementById('bgDiv').offsetHeight
+      let bgMaxHeight = this.bgMaxHeight
+      var bgDiv = document.getElementById('bgDiv')
+      var bgH = bgDiv.offsetHeight
       let maxY = 100.0
       var y = (top * offset / bgH) * 100.0
       if (y > maxY) {
         y = maxY
       }
       y = maxY - y
-      console.log('o_y:' + y)
       if (y <= 0) {
-        this.styleBgHeight = {
-          backgroundAttachment: 'fixed'
+        if (this.lastST === 0) {
+          this.lastST = wS
         }
-      } else {
+        var rsh = (1.0 - (wS - this.lastST) / wH) * bgMaxHeight
+        if (rsh > bgMaxHeight) {
+          rsh = bgMaxHeight
+        }
         this.styleBgHeight = {
-          backgroundAttachment: 'scroll'
+          height: rsh + 'px'
         }
       }
       this.styleBgY = {
         backgroundPositionY: y + '%'
       }
-      console.log('y:' + y)
       if (wS > (hT + hH * 0.4 - wH)) {
         this.show1 = true
         this.show2 = true
@@ -212,9 +223,7 @@ export default {
 .bg{
   background: url('/static/homePage/homeBg.jpg') no-repeat center center;
   width: 100%;
-  height: 800px;
-  background-position:left top;
-  background-size:cover;
+  background-size: 100% 56.56vw;
   position: relative;
 }
 
