@@ -3,39 +3,41 @@
     <div class="oneshow1">
       <br>
       <br>
-      <p style="text-indent:8em"><font size="10"> <b>+作品展示</b></font></p>
+      <p style="text-indent:8em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>+作品展示</b></font></p>
       <br>
       <br>
       <br>
     </div>
-    <table class="oneshow2" align="center">
-      <img src="../assets/title_left.png">
+    <table class="oneshow2" align="center" border="0">
+      <img style="width: 100%;" src="/static/show/title.png">
     </table>
     <table class="oneshow3" align="center" cellspacing="100">
     <tr>
-      <td style="height:300px;width:400px;">
-      <p><font size="5"> <b>典致网络专业提供美术外包服务，为每位客户提供全方位的美术解决方案。在游戏行业拥有丰富的专业经验和执行能力，核心成员更是参与过国内众多以美术制作精良著称的游戏项目，拥有精良的画面品质和优秀的设计能力。在项目经验和基础素质方面无可替代！<br>美术风格涵盖：日韩、欧美、Q版、写实、现代等，无论是2D还是3D，或是动作、特效，我们团队都竭力风险自己的能量，帮助客户在美术环节达到最佳的视觉呈现效果。
-</b></font></p>
+      <td style="height:30%;width:50%;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;">
+      <p style="height:30%;width:80%;margin-left:20%;margin-top:-15px;" ><font size="5">典致网络专业提供美术外包服务，为每位客户提供全方位的美术解决方案。在游戏行业拥有丰富的专业经验和执行能力，核心成员更是参与过国内众多以美术制作精良著称的游戏项目，拥有精良的画面品质和优秀的设计能力。在项目经验和基础素质方面无可替代！<br>美术风格涵盖：日韩、欧美、Q版、写实、现代等，无论是2D还是3D，或是动作、特效，我们团队都竭力奉献自己的能量，帮助客户在美术环节达到最佳的视觉呈现效果。
+    </font></p>
       </td>
-      <td style="height:300px;width:400px;">
-        <font size="6"> <b>我们提供服务:<br></b></font>
-        <font size="5"> <b>Web Game Out•sourcing网页游戏美术整包<br>Mobile Game Outsourcing手机游戏美术整包</b></font>
+      <td style="height:30%;width:50%;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;">
+        <font size="6"> <b>我们提供服务:<br><br></b></font>
+        <font size="5"> Web Game Out•sourcing网页游戏美术整包<br>Mobile Game Outsourcing手机游戏美术整包</font>
+        <br>
         <br>
         <font size="6"> <b>2D<br></b></font>
-        <font size="5"> <b>游戏角色概念设计Conceptual Design of game character<br>游戏场景概念设计Conceptual Design of game scenes<br>游戏特效制作Game effects</b></font>
+        <font size="5"> 游戏角色概念设计Conceptual Design of game character<br>游戏场景概念设计Conceptual Design of game scenes<br>游戏特效制作Game effects</font>
+        <br>
         <br>
         <font size="6"> <b>3D<br></b></font>
-        <font size="5"> <b>角色美术外包Characters<br>场景美术外包Art design in scenes<br>游戏美术整包Whole games</b></font>
+        <font size="5"> 角色美术外包Characters<br>场景美术外包Art design in scenes<br>游戏美术整包Whole games</font>
       </td>
     </tr>
     </table>
-    <p style="text-align:center"><font size="10"> <b>—2D作品展示—</b></font></p>
+    <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>—2D作品展示—</b></font></p>
     <table class="oneshow4" align="center">
       <!-- <tr> -->
       <img class="little1"
           v-preview="imgs[0].url"
           v-bind:src="imgs[0].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[0].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
@@ -49,21 +51,21 @@
       <img class="little1"
           v-preview="imgs[2].url"
           v-bind:src="imgs[2].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[2].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[3].url"
           v-bind:src="imgs[3].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[3].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[4].url"
           v-bind:src="imgs[4].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[4].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
@@ -72,21 +74,21 @@
       <img class="little1"
           v-preview="imgs[5].url"
           v-bind:src="imgs[5].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[5].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little2"
           v-preview="imgs[6].url"
           v-bind:src="imgs[6].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[6].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[7].url"
           v-bind:src="imgs[7].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[7].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
@@ -95,35 +97,35 @@
       <img class="little1"
           v-preview="imgs[8].url"
           v-bind:src="imgs[8].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[8].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[9].url"
           v-bind:src="imgs[9].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[9].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[10].url"
           v-bind:src="imgs[10].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[10].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[11].url"
           v-bind:src="imgs[11].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[11].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[12].url"
           v-bind:src="imgs[12].url1"
-          :alt="imgs[1].title"
+          :alt="imgs[12].title"
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
@@ -147,71 +149,72 @@ export default {
   name: 'Gallery',
   data () {
     return {
+      // titleimg:""
       imgs: [
         {
-          url: '/static/show/small/p1.png',
+          url: '/static/show/big/p1.jpg',
           url1: '/static/show/small/p1.png',
-          title: 'pic1'
+          title: 'CharacterConcept'
         },
         {
-          url: '/static/show/small/p2.png',
+          url: '/static/show/big/p2.jpg',
           url1: '/static/show/small/p2.png',
-          title: 'pic2'
+          title: 'CharacterConcept'
         },
         {
-          url: '/static/show/small/p3.png',
+          url: '/static/show/big/p3.jpg',
           url1: '/static/show/small/p3.png',
-          title: 'pic3'
+          title: 'CharacterConcept'
         },
         {
-          url: '/static/show/small/p4.png',
+          url: '/static/show/big/p4.jpg',
           url1: '/static/show/small/p4.png',
-          title: 'pic4'
+          title: 'CharacterConcept'
         },
         {
-          url: '/static/show/small/p5.png',
+          url: '/static/show/big/p5.jpg',
           url1: '/static/show/small/p5.png',
-          title: 'pic2'
+          title: 'CharacterConcept'
         },
         {
-          url: '/static/show/small/p6.png',
+          url: '/static/show/big/p6.jpg',
           url1: '/static/show/small/p6.png',
-          title: 'pic3'
+          title: 'CharacterConcept'
         },
         {
-          url: '/static/show/small/p7.png',
+          url: '/static/show/big/p7.png',
           url1: '/static/show/small/p7.png',
-          title: 'pic4'
+          title: 'ScenesConcept'
         },
         {
-          url: '/static/show/small/p8.png',
+          url: '/static/show/big/p8.jpg',
           url1: '/static/show/small/p8.png',
-          title: 'pic2'
+          title: 'CharacterConcept'
         },
         {
-          url: '/static/show/small/p9.png',
+          url: '/static/show/big/p9.jpg',
           url1: '/static/show/small/p9.png',
-          title: 'pic3'
+          title: 'ScenesConcept'
         },
         {
-          url: '/static/show/small/p10.png',
+          url: '/static/show/big/p10.png',
           url1: '/static/show/small/p10.png',
-          title: 'pic4'
+          title: 'ScenesConcept'
         },
         {
-          url: '/static/show/small/p11.png',
+          url: '/static/show/big/p11.png',
           url1: '/static/show/small/p11.png',
-          title: 'pic2'
+          title: 'ScenesConcept'
         },
         {
-          url: '/static/show/small/p12.png',
+          url: '/static/show/big/p12.jpg',
           url1: '/static/show/small/p12.png',
-          title: 'pic3'
+          title: 'ScenesConcept'
         },
         {
-          url: '/static/show/small/p13.png',
+          url: '/static/show/big/p13.jpg',
           url1: '/static/show/small/p13.png',
-          title: 'pic4'
+          title: 'ScenesConcept'
         }
       ]
     }
@@ -225,8 +228,9 @@ export default {
 } */
 
 .little1{
-  height:295px;
-  width:370px;
+  /* height:295px;
+  width:370px; */
+  width: 19.5%;
   margin-left: 2px;
   margin-right: 2px;
 }
@@ -234,8 +238,9 @@ export default {
   opacity: 0.5;
 }
 .little2{
-  height:295px;
-  width:1118px;
+   /* height:288px; */
+  /*width:1118px; */
+  width: 58.9%;
   margin-left: 2px;
   margin-right: 2px;
 }
@@ -252,7 +257,7 @@ export default {
    width: 100%;
 }
 .oneshow2{
-   background-color: #FF0000;
+   background-color: #ffffff;
 }
 .oneshow3{
    background-color: #ffffff;
