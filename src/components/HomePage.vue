@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div id="bgDiv" class="bg" v-bind:style="{backgroundPositionY:posY}">
+  <div id="bgDiv" class="bg" v-bind:style="[styleBgY,styleBgHeight]">
     <div class="stencil">
        <div class="bgDiv">
        <p class="big bigPos1">欢迎来到</p>
@@ -114,7 +114,12 @@ export default {
         {name: '黄圆周', qq: '123456789', id: 0},
         {name: '黄圆周', qq: '123456789', id: 1}
       ],
-      posY: 0 + '%',
+      styleBgY: {
+        backgroundPositionY: 100 + '%'
+      },
+      styleBgHeight: {
+        backgroundAttachment: 'scroll'
+      },
       show1: false,
       show2: false,
       show3: false,
@@ -162,11 +167,26 @@ export default {
       }
       var top = wS
       var bgH = document.getElementById('bgDiv').offsetHeight
-      var y = (top * offset / bgH) * 100
-      if (y > 100) {
-        y = 100
+      let maxY = 100.0
+      var y = (top * offset / bgH) * 100.0
+      if (y > maxY) {
+        y = maxY
       }
-      this.posY = y + '%'
+      y = maxY - y
+      console.log('o_y:' + y)
+      if (y <= 0) {
+        this.styleBgHeight = {
+          backgroundAttachment: 'fixed'
+        }
+      } else {
+        this.styleBgHeight = {
+          backgroundAttachment: 'scroll'
+        }
+      }
+      this.styleBgY = {
+        backgroundPositionY: y + '%'
+      }
+      console.log('y:' + y)
       if (wS > (hT + hH * 0.4 - wH)) {
         this.show1 = true
         this.show2 = true
@@ -193,11 +213,11 @@ export default {
   background: url('/static/homePage/homeBg.jpg') no-repeat center center;
   width: 100%;
   height: 800px;
+  background-position:left top;
   background-size:cover;
   position: relative;
-  min-width:884px;
-  min-height:800px;
 }
+
 .stencil{
   width:100%;
   height:199px;
