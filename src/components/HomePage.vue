@@ -164,7 +164,6 @@ export default {
   width: 100%;
   height: 800px;
   background-size:100% 56.56vw;
-  background-position-y:0%;
     /* overflow: hidden; */
   /* position: relative; */
 }
