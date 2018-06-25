@@ -74,6 +74,29 @@
     <div class="container">
       <img class="icon" src="../assets/homePage/white.png">
       <p class="title">联系我们</p>
+      <p class="p1">通过电话或者网络</p>
+      <img class="icon1" src="../assets/homePage/sy_email.png">
+      <p class="p2">{{email}}</p>
+      <img class="icon2" src="../assets/homePage/sy_phone.png">
+      <div class="div1">
+        <p class="p3">{{phone0}}</p>
+        <p class="p4">{{phone1}}</p>
+      </div>
+      <p class="p5">{{addr}}</p>
+      <p class="p6">加入我们</p>
+      <div class="div2">
+      <table cellpadding="0" cellspacing="0">
+        <tr v-for="item in qqData" :key="item.id">
+          <td style="position: relative;">
+            <img src="../assets/homePage/sy_qq.png">
+            <div>
+              <p class="qqName">商务:{{item.name}}</p>
+              <p class="qq">QQ:{{item.qq}}</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+      </div>
     </div>
   </div>
 </div>
@@ -83,6 +106,14 @@ export default {
   name: 'HomePage',
   data () {
     return {
+      email: 'xyz@163.com',
+      phone0: '028 12345678',
+      phone1: '+86 12345678912',
+      addr: '中国四川省成都市香年广场T3-1203',
+      qqData: [
+        {name: '黄圆周', qq: '123456789', id: 0},
+        {name: '黄圆周', qq: '123456789', id: 1}
+      ],
       posY: 0 + '%',
       show1: false,
       show2: false,
@@ -120,7 +151,7 @@ export default {
   },
   methods: {
     scrollf: function () {
-      let offset = 2.0 * document.documentElement.clientWidth / 1349.0
+      let offset = 4.0 * document.documentElement.clientWidth / 1349.0
       var scrodiv = document.getElementById('content1')
       var hT = scrodiv.offsetTop
       var hH = scrodiv.offsetHeight
@@ -157,15 +188,15 @@ export default {
   }
 }
 </script>
-
 <style scoped>
 .bg{
   background: url('/static/homePage/homeBg.jpg') no-repeat center center;
   width: 100%;
   height: 800px;
-  background-size:100% 56.56vw;
-    /* overflow: hidden; */
-  /* position: relative; */
+  background-size:cover;
+  position: relative;
+  min-width:884px;
+  min-height:800px;
 }
 .stencil{
   width:100%;
@@ -397,18 +428,122 @@ export default {
   margin: auto;
   width: 1016px;
   height:100%;
-  /* background-color: red; */
+  position: relative;
 }
 .contactus .container .icon{
   margin-left:40px;
   margin-top:57px;
+  position: absolute;
 }
 .contactus .container .title{
+  position: absolute;
   margin-left:104px;
-  padding-top:50px;
+  margin-top:50px;
   font-family:'fzzhengheis-eb-gbregular';
   font-weight: normal;
   font-size: 64px;
   color:white;
+}
+.contactus .container .p1{
+  position: absolute;
+  font-size: 18px;
+  color:white;
+  margin-left:114px;
+  margin-top:129px;
+  font-style: italic;
+}
+.contactus .container .icon1{
+  position: absolute;
+  margin-top:208px;
+  margin-left:104px;
+}
+.contactus .container .p2{
+  position: absolute;
+  margin-left:160px;
+  margin-top:207px;
+  font-size: 16px;
+  color:white;
+}
+.contactus .container .icon2{
+position: absolute;
+margin-top:248px;
+margin-left:104px;
+}
+.contactus .container .div1{
+  position: absolute;
+  margin-top:249px;
+  margin-left:160px;
+  height:28px;
+  width:140px;
+}
+.contactus .container .div1 .p3{
+  line-height: 10px;
+  margin:0;
+  padding:0;
+  font-size: 15px;
+  color:white;
+}
+.contactus .container .div1 .p4{
+  line-height: 10px;
+  margin-top:8px;
+  margin-bottom:0;
+  padding:0;
+  font-size: 15px;
+  color:white;
+}
+.contactus .container .p5{
+  position: absolute;
+  margin-bottom:0;
+  bottom:30px;
+  margin-left:114px;
+  font-size: 16px;
+  color:white;
+}
+.contactus .container .p6{
+  position: absolute;
+  margin-bottom:0;
+  bottom:29px;
+  margin-left:573px;
+  font-size: 18px;
+  color:white;
+}
+.contactus .container .div2{
+  position: absolute;
+  margin-bottom:0;
+  bottom:92px;
+  margin-left:573px;
+  width:400px;
+  height:200px;
+}
+.contactus .container .div2 table{
+  position: absolute;
+  bottom:0px;
+  width:100%;
+  height: 172px;
+}
+.contactus .container .div2 table tr td img{
+  bottom:20px;
+  position: absolute;
+}
+.contactus .container .div2 table tr td div{
+  height:36px;
+  width:200px;
+  position: relative;
+  margin-left: 78px;
+}
+.qqName{
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  margin-top:-3px;
+  top:0px;
+}
+.qq{
+  position: absolute;
+  margin-bottom:-3px;
+  bottom:0px;
+  color: white;
+  font-size: 16px;
+  margin-left:9px;
 }
 </style>
