@@ -197,6 +197,10 @@ export default {
         this.styleBgHeight = {
           height: rsh + 'px'
         }
+      } else if (y >= 100) {
+        this.styleBgHeight = {
+          height: bgMaxHeight + 'px'
+        }
       }
       this.styleBgY = {
         backgroundPositionY: y + '%'
@@ -226,10 +230,9 @@ export default {
 .bg{
   background: url('/static/homePage/homeBg.jpg') no-repeat center center;
   width: 100%;
-  background-size: 100% 56.56vw;
+  background-size: cover;
   position: relative;
 }
-
 .stencil{
   width:100%;
   height:199px;
