@@ -5,15 +5,17 @@
     <div class="navTitleDiv">
     <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-    <td class="navTitleTabletd"><label :class="{ navTitlelabelVisited: isSubmitted1 }" id="btnHome" @click="switchRoute($event,'/')" class="navTitlelabel" >首页</label></td>
-    <td class="navTitleTabletd"><label :class="{ navTitlelabelVisited: isSubmitted2 }" id="btnAbout" @click="switchRoute($event,'/aboutus')" class="navTitlelabel" >关于我们</label></td>
-    <td class="navTitleTabletd"><label :class="{ navTitlelabelVisited: isSubmitted3 }" id="btnGallery" @click="switchRoute($event,'/gallery')" class="navTitlelabel" >作品展示</label></td>
+    <td class="navTitleTabletd"><label :class="{ navTitlelabelVisited: isSubmitted1 }" id="btnHome" @click="switchRoute('/')" class="navTitlelabel" >首页</label></td>
+    <td class="navTitleTabletd"><label :class="{ navTitlelabelVisited: isSubmitted2 }" id="btnAbout" @click="switchRoute('/aboutus')" class="navTitlelabel" >关于我们</label></td>
+    <td class="navTitleTabletd"><label :class="{ navTitlelabelVisited: isSubmitted3 }" id="btnGallery" @click="switchRoute('/gallery')" class="navTitlelabel" >作品展示</label></td>
     </tr>
     </table>
     <div id="navTitleline" v-bind:class="{ navTitlelineTransition: isTransition }"></div>
     </div>
     </div>
-    <router-view/>
+     <keep-alive>
+      <router-view @switchroute="switchRoute"></router-view>
+     </keep-alive>
   <lg-preview></lg-preview>
   </div>
 </template>
@@ -36,7 +38,7 @@ export default {
     }, 20)
   },
   methods: {
-    switchRoute: function (event, path) {
+    switchRoute: function (path) {
       this.updateLabelStatus(path)
       if (path !== this.$route.path) {
         this.$router.push({ path: path })

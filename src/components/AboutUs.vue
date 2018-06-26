@@ -13,7 +13,10 @@
 
 <script>
 export default {
-  name: 'AboutUs'
+  name: 'AboutUs',
+  activated: function () {
+    this.$emit('switchroute', '/aboutus')
+  }
 }
 </script>
 <style scoped>

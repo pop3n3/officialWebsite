@@ -147,6 +147,9 @@
 <script>
 export default {
   name: 'Gallery',
+  activated: function () {
+    this.$emit('switchroute', '/gallery')
+  },
   data () {
     return {
       // titleimg:""

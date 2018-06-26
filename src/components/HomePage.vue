@@ -118,9 +118,9 @@ export default {
         backgroundPositionY: 100 + '%'
       },
       styleBgHeight: {
-        height: 550 + 'px'
+        height: 780 + 'px'
       },
-      bgMaxHeight: 550.0,
+      bgMaxHeight: 780.0,
       lastST: 0,
       show1: false,
       show2: false,
@@ -152,15 +152,18 @@ export default {
   },
   mounted: function () {
     this.scrollf()
-    this.styleBgY = {
-      backgroundPositionY: 100 + '%'
-    }
-    this.styleBgHeight = {
-      height: 550 + 'px'
-    }
+    // this.styleBgY = {
+    //   backgroundPositionY: 100 + '%'
+    // }
+    // this.styleBgHeight = {
+    //   height: 780 + 'px'
+    // }
     window.addEventListener('scroll', () => {
       this.scrollf()
     })
+  },
+  activated: function () {
+    this.$emit('switchroute', '/')
   },
   methods: {
     scrollf: function () {
