@@ -144,7 +144,7 @@ background-color: #6876dc;
   position:absolute;
   margin:0;
   left:850px;
-  top:74px;
+  top:124px;
 }
 .slidefade-enter-active {
   transition: all 1.8s ease;
