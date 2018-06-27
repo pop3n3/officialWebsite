@@ -178,10 +178,10 @@ export default {
       }
       var top = wS
       let bgMaxHeight = this.bgMaxHeight
-      var bgDiv = document.getElementById('bgDiv')
-      var bgH = bgDiv.offsetHeight
+      // var bgDiv = document.getElementById('bgDiv')
+      // var bgH = bgDiv.offsetHeight
       let maxY = 100.0
-      var y = (top * offset / bgH) * 100.0
+      var y = (top * offset / wH) * 100.0
       if (y > maxY) {
         y = maxY
       }
@@ -232,6 +232,8 @@ export default {
   width: 100%;
   background-size: cover;
   position: relative;
+  transition: height 0.001s;
+  /* transition: background-position-y 0.001s; */
 }
 .stencil{
   width:100%;
