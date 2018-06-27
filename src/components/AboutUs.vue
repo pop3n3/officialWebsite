@@ -107,7 +107,8 @@ background-color: #6876dc;
 
 }
 .introduce{
-
+ width:100%;
+ height:600px;
 }
 .imgs{
 
