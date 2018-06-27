@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import vueAccordion from './vue-accordion.vue'
+import vueAccordion from './others/vue-accordion.vue'
 export default {
   name: 'AboutUs',
   components: {
