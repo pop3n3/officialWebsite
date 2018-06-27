@@ -3,7 +3,7 @@
    <div class="title">
      <br>
       <br>
-      <p style="text-indent:25em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>◆关于我们</b></font></p>
+      <p style="text-indent:25em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>◆关于我们 </b></font></p>
       <br>
       <br>
       <br>
@@ -51,7 +51,7 @@
             </tr>
           </table>
         </td>
-        <td style="height:500;width:1200px;letter-spacing:1px;">
+        <td style="height:500;width:1200px;letter-spacing:1px;position:absolute">
           <table style="width:800px">
           <font style="font-family:'fzzhengheis-eb-gbregular';" size="6"> <b>公司<br></b></font>
           <font size="5"> 成都典致网络有限公司成立于2018年，专注于PC、移动端的美术外包服务，提供游戏角色、场景、特效等设计和游戏2D 和3D美术在内的全方位服务方案。</font>
