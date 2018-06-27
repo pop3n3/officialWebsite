@@ -14,7 +14,7 @@
    <div class="introduce">
      <table class="oneshow3" align="center" cellspacing="50">
       <tr>
-        <td style="height:500;width:800px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;">
+        <td v-if="show1" style="height:500;width:800px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;">
           <table style="width:500px;margin-left:300px;">
             <tr>
             <td style="width:140">
@@ -85,6 +85,7 @@ export default {
   },
   data () {
     return {
+      show1: false,
       items: [
         {image: '/static/about/1.png', width: 896.0},
         {image: '/static/about/2.jpg', width: 449.0},
