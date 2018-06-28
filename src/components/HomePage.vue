@@ -107,11 +107,11 @@ export default {
   data () {
     return {
       email: 'sichuan@scdianzhi.com ',
-      phone0: '028 12345678',
+      phone0: '028 86160582',
       phone1: '+86 18328482858',
-      addr: '中国四川省成都市香年广场T3-1203',
+      addr: '成都市高新区吉泰五路88号香年广场T2栋30楼',
       qqData: [
-        {name: '安芯', qq: '124452539', id: 0},
+        {name: '程伟', qq: '18877143', id: 0},
         {name: '安芯', qq: '124452539', id: 1}
       ],
       styleBgY: {
