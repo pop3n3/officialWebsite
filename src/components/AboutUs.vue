@@ -106,12 +106,12 @@ export default {
       show1: false,
       items: [
         {image: '/static/about/1.png', width: 896.0},
-        {image: '/static/about/2.jpg', width: 449.0},
+        {image: '/static/about/2.jpg', width: 799.0},
         {image: '/static/about/3.jpg', width: 799.0},
-        {image: '/static/about/4.jpg', width: 799.0},
+        {image: '/static/about/4.jpg', width: 449.0},
         {image: '/static/about/5.jpg', width: 799.0},
-        {image: '/static/about/6.jpg', width: 799.0},
-        {image: '/static/about/7.jpg', width: 873.0}
+        {image: '/static/about/6.jpg', width: 873.0},
+        {image: '/static/about/7.jpg', width: 799.0}
       ]
     }
   }
