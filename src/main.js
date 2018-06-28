@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import vuePicturePreview from 'vue-picture-preview'
+import 'babel-polyfill'
 Vue.use(vuePicturePreview)
 Vue.config.productionTip = false
 /* eslint-disable no-new */

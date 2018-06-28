@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "vue": "^2.5.16",
     "vue-picture-preview": "^1.2.0",
     "vue-router": "^3.0.1"
