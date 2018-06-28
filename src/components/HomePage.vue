@@ -106,13 +106,13 @@ export default {
   name: 'HomePage',
   data () {
     return {
-      email: 'xyz@163.com',
+      email: 'sichuan@scdianzhi.com ',
       phone0: '028 12345678',
-      phone1: '+86 12345678912',
+      phone1: '+86 18328482858',
       addr: '中国四川省成都市香年广场T3-1203',
       qqData: [
-        {name: '黄圆周', qq: '123456789', id: 0},
-        {name: '黄圆周', qq: '123456789', id: 1}
+        {name: '安芯', qq: '124452539', id: 0},
+        {name: '安芯', qq: '124452539', id: 1}
       ],
       styleBgY: {
         backgroundPositionY: 100 + '%'
