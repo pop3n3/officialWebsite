@@ -33,7 +33,6 @@
     </table>
     <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>—2D作品展示—</b></font></p>
     <table class="oneshow4" align="center">
-      <!-- <tr> -->
       <img class="little1"
           v-preview="imgs[0].url"
           v-bind:src="imgs[0].url1"
@@ -69,8 +68,7 @@
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
-      <!-- </tr>
-      <tr> -->
+
       <img class="little1"
           v-preview="imgs[5].url"
           v-bind:src="imgs[5].url1"
@@ -92,8 +90,7 @@
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
-      <!-- </tr>
-      <tr> -->
+
       <img class="little1"
           v-preview="imgs[8].url"
           v-bind:src="imgs[8].url1"
@@ -129,7 +126,6 @@
           :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
-      <!-- </tr> -->
     </table>
     <!-- <table class="oneshow4" align="center">
     <tr style="float:left" v-for="(img,index) in imgs" :key="index">

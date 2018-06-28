@@ -152,12 +152,12 @@ export default {
   },
   mounted: function () {
     this.scrollf()
-    // this.styleBgY = {
-    //   backgroundPositionY: 100 + '%'
-    // }
-    // this.styleBgHeight = {
-    //   height: 780 + 'px'
-    // }
+    this.styleBgY = {
+      backgroundPositionY: 100 + '%'
+    }
+    this.styleBgHeight = {
+      height: 780 + 'px'
+    }
     window.addEventListener('scroll', () => {
       this.scrollf()
     })
@@ -194,17 +194,17 @@ export default {
         if (rsh > bgMaxHeight) {
           rsh = bgMaxHeight
         }
-        this.styleBgHeight = {
-          height: rsh + 'px'
-        }
+        // this.styleBgHeight = {
+        //   height: rsh + 'px'
+        // }
       } else if (y >= 100) {
-        this.styleBgHeight = {
-          height: bgMaxHeight + 'px'
-        }
+        // this.styleBgHeight = {
+        //   height: bgMaxHeight + 'px'
+        // }
       }
-      this.styleBgY = {
-        backgroundPositionY: y + '%'
-      }
+      // this.styleBgY = {
+      //   backgroundPositionY: y + '%'
+      // }
       if (wS > (hT + hH * 0.4 - wH)) {
         this.show1 = true
         this.show2 = true
@@ -232,7 +232,8 @@ export default {
   width: 100%;
   background-size: cover;
   position: relative;
-  transition: height 0.001s;
+  /* transition: height 0.001s; */
+  background-attachment: fixed;
   /* transition: background-position-y 0.001s; */
 }
 .stencil{
