@@ -63,6 +63,7 @@
 </template>
 <script>
 import { PhotoSwipe, PhotoSwipeGallery } from 'v-photoswipe'
+import photoswipe from 'photoswipe'
 export default {
   name: 'Gallery',
   activated: function () {
@@ -70,16 +71,27 @@ export default {
   },
   components: {
     'v-photoswipe': PhotoSwipe,
-    'v-photoswipe-gallery': PhotoSwipeGallery
+    'v-photoswipe-gallery': PhotoSwipeGallery,
+    photoswipe
   },
   data () {
     return {
       isOpen: false,
       isOpenGallery: false,
       options: {
-        index: 0
+        barsSize: {top: 44, bottom: 'auto'},
+        timeToIdle: 4000,
+        timeToIdleOutside: 1000,
+        loadingIndicatorDelay: 1000,
+        closeEl: true,
+        captionEl: true,
+        fullscreenEl: true,
+        zoomEl: true,
+        shareEl: false,
+        counterEl: true,
+        arrowEl: true,
+        preloaderEl: true
       },
-      optionsGallery: {},
       titleimags: ['/static/show/title1.png', '/static/show/title2.png', '/static/show/title3.png', '/static/show/title4.png', '/static/show/title5.png'],
       i: 0,
       now: '/static/show/title1.png',

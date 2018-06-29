@@ -9,7 +9,7 @@
       <br>
    </div>
    <div class="bg">
-     <img style="width: 100%;" src="/static/show/title.png">
+     <img style="width: 100%;" v-bind:src="title1">
    </div>
    <div id="inTroduce" class="introduce">
      <table class="introduceTable" align="center" cellspacing="0" cellpadding="0">
@@ -106,6 +106,7 @@ export default {
   },
   data () {
     return {
+      title1: '/static/show/title1.png',
       show1: false,
       items: [
         {image: '/static/about/1.png', width: 896.0},
