@@ -33,21 +33,19 @@
     </table>
     <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>—2D作品展示—</b></font></p>
     <table class="paragraph" align="center">
-      <div>
         <img class="little1" @click="showPhotoSwipe(0)" v-bind:src="imgs[0].url">
         <img class="little1" @click="showPhotoSwipe(1)" v-bind:src="imgs[1].url">
         <img class="little1" @click="showPhotoSwipe(2)" v-bind:src="imgs[2].url">
         <img class="little1" @click="showPhotoSwipe(3)" v-bind:src="imgs[3].url">
         <img class="little1" @click="showPhotoSwipe(4)" v-bind:src="imgs[4].url">
         <img class="little1" @click="showPhotoSwipe(5)" v-bind:src="imgs[5].url">
-        <img class="little1" @click="showPhotoSwipe(6)" v-bind:src="imgs[6].url">
+        <img class="little2" @click="showPhotoSwipe(6)" v-bind:src="imgs[6].url">
         <img class="little1" @click="showPhotoSwipe(7)" v-bind:src="imgs[7].url">
         <img class="little1" @click="showPhotoSwipe(8)" v-bind:src="imgs[8].url">
         <img class="little1" @click="showPhotoSwipe(9)" v-bind:src="imgs[9].url">
         <img class="little1" @click="showPhotoSwipe(10)" v-bind:src="imgs[10].url">
         <img class="little1" @click="showPhotoSwipe(11)" v-bind:src="imgs[11].url">
         <img class="little1" @click="showPhotoSwipe(12)" v-bind:src="imgs[12].url">
-      </div>
     </table>
     <v-photoswipe :isOpen="isOpen" :items="imgs" :options="options" @close="hidePhotoSwipe"></v-photoswipe>
     <!-- <table class="oneshow4" align="center">
