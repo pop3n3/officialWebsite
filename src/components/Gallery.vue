@@ -32,87 +32,24 @@
     </tr>
     </table>
     <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>—2D作品展示—</b></font></p>
-    <table class="oneshow4" align="center">
-      <img class="little1"
-          v-preview="imgs[0].url"
-          v-bind:src="imgs[0].url1"
-          :alt="imgs[0].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[1].url"
-          v-bind:src="imgs[1].url1"
-          :alt="imgs[1].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[2].url"
-          v-bind:src="imgs[2].url1"
-          :alt="imgs[2].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[3].url"
-          v-bind:src="imgs[3].url1"
-          :alt="imgs[3].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[4].url"
-          v-bind:src="imgs[4].url1"
-          :alt="imgs[4].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[5].url"
-          v-bind:src="imgs[5].url1"
-          :alt="imgs[5].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little2"
-          v-preview="imgs[6].url"
-          v-bind:src="imgs[6].url1"
-          :alt="imgs[6].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[7].url"
-          v-bind:src="imgs[7].url1"
-          :alt="imgs[7].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-
-      <img class="little1"
-          v-preview="imgs[8].url"
-          v-bind:src="imgs[8].url1"
-          :alt="imgs[8].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[9].url"
-          v-bind:src="imgs[9].url1"
-          :alt="imgs[9].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[10].url"
-          v-bind:src="imgs[10].url1"
-          :alt="imgs[10].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[11].url"
-          v-bind:src="imgs[11].url1"
-          :alt="imgs[11].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-      <img class="little1"
-          v-preview="imgs[12].url"
-          v-bind:src="imgs[12].url1"
-          :alt="imgs[12].title"
-          preview-title-enable="true"
-          preview-nav-enable="true">
+    <table class="paragraph" align="center">
+      <div>
+        <img class="little1" @click="showPhotoSwipe(0)" v-bind:src="imgs[0].url">
+        <img class="little1" @click="showPhotoSwipe(1)" v-bind:src="imgs[1].url">
+        <img class="little1" @click="showPhotoSwipe(2)" v-bind:src="imgs[2].url">
+        <img class="little1" @click="showPhotoSwipe(3)" v-bind:src="imgs[3].url">
+        <img class="little1" @click="showPhotoSwipe(4)" v-bind:src="imgs[4].url">
+        <img class="little1" @click="showPhotoSwipe(5)" v-bind:src="imgs[5].url">
+        <img class="little1" @click="showPhotoSwipe(6)" v-bind:src="imgs[6].url">
+        <img class="little1" @click="showPhotoSwipe(7)" v-bind:src="imgs[7].url">
+        <img class="little1" @click="showPhotoSwipe(8)" v-bind:src="imgs[8].url">
+        <img class="little1" @click="showPhotoSwipe(9)" v-bind:src="imgs[9].url">
+        <img class="little1" @click="showPhotoSwipe(10)" v-bind:src="imgs[10].url">
+        <img class="little1" @click="showPhotoSwipe(11)" v-bind:src="imgs[11].url">
+        <img class="little1" @click="showPhotoSwipe(12)" v-bind:src="imgs[12].url">
+      </div>
     </table>
+    <v-photoswipe :isOpen="isOpen" :items="imgs" :options="options" @close="hidePhotoSwipe"></v-photoswipe>
     <!-- <table class="oneshow4" align="center">
     <tr style="float:left" v-for="(img,index) in imgs" :key="index">
       <img class="oneshowa"
@@ -127,95 +64,113 @@
   </div>
 </template>
 <script>
+import { PhotoSwipe, PhotoSwipeGallery } from 'v-photoswipe'
 export default {
   name: 'Gallery',
   activated: function () {
     this.$emit('switchroute', '/gallery')
   },
   components: {
+    'v-photoswipe': PhotoSwipe,
+    'v-photoswipe-gallery': PhotoSwipeGallery
   },
   data () {
     return {
+      isOpen: false,
+      isOpenGallery: false,
+      options: {
+        index: 0
+      },
+      optionsGallery: {},
       imgs: [
         {
-          url: '/static/show/big/p1.jpg',
-          url1: '/static/show/small/p1.png',
-          title: 'CharacterConcept',
-          index: 0
+          src: '/static/show/big/p1.jpg',
+          url: '/static/show/small/p1.png',
+          w: 2600,
+          h: 2088
         },
         {
-          index: 1,
-          url: '/static/show/big/p2.jpg',
-          url1: '/static/show/small/p2.png',
-          title: 'CharacterConcept'
+          w: 7581,
+          h: 6547,
+          src: '/static/show/big/p2.jpg',
+          url: '/static/show/small/p2.png'
         },
         {
-          index: 2,
-          url: '/static/show/big/p3.jpg',
-          url1: '/static/show/small/p3.png',
-          title: 'CharacterConcept'
+          src: '/static/show/big/p3.jpg',
+          url: '/static/show/small/p3.png',
+          w: 3536,
+          h: 2000
         },
         {
-          index: 3,
-          url: '/static/show/big/p4.jpg',
-          url1: '/static/show/small/p4.png',
-          title: 'CharacterConcept'
+          src: '/static/show/big/p4.jpg',
+          url: '/static/show/small/p4.png',
+          w: 7813,
+          h: 8594
         },
         {
-          index: 4,
-          url: '/static/show/big/p5.jpg',
-          url1: '/static/show/small/p5.png',
-          title: 'CharacterConcept'
+          src: '/static/show/big/p5.jpg',
+          url: '/static/show/small/p5.png',
+          w: 3881,
+          h: 3976
         },
         {
-          index: 5,
-          url: '/static/show/big/p6.jpg',
-          url1: '/static/show/small/p6.png',
-          title: 'CharacterConcept'
+          src: '/static/show/big/p6.jpg',
+          url: '/static/show/small/p6.png',
+          w: 992,
+          h: 1349
         },
         {
-          index: 6,
-          url: '/static/show/big/p7.png',
-          url1: '/static/show/small/p7.png',
-          title: 'ScenesConcept'
+          src: '/static/show/big/p7.png',
+          url: '/static/show/small/p7.png',
+          w: 2048,
+          h: 1486
         },
         {
-          index: 7,
-          url: '/static/show/big/p8.jpg',
-          url1: '/static/show/small/p8.png',
-          title: 'CharacterConcept'
+          src: '/static/show/big/p8.jpg',
+          url: '/static/show/small/p8.png',
+          w: 3072,
+          h: 3202
         },
         {
-          index: 8,
-          url: '/static/show/big/p9.jpg',
-          url1: '/static/show/small/p9.png',
-          title: 'ScenesConcept'
+          src: '/static/show/big/p9.jpg',
+          url: '/static/show/small/p9.png',
+          w: 1920,
+          h: 1080
         },
         {
-          index: 9,
-          url: '/static/show/big/p10.png',
-          url1: '/static/show/small/p10.png',
-          title: 'ScenesConcept'
+          src: '/static/show/big/p10.png',
+          url: '/static/show/small/p10.png',
+          w: 2048,
+          h: 1203
         },
         {
-          index: 10,
-          url: '/static/show/big/p11.png',
-          url1: '/static/show/small/p11.png',
-          title: 'ScenesConcept'
+          src: '/static/show/big/p11.png',
+          url: '/static/show/small/p11.png',
+          w: 1920,
+          h: 1080
         },
         {
-          index: 11,
-          url: '/static/show/big/p12.jpg',
-          url1: '/static/show/small/p12.png',
-          title: 'ScenesConcept'
+          src: '/static/show/big/p12.jpg',
+          url: '/static/show/small/p12.png',
+          w: 1920,
+          h: 1080
         },
         {
-          index: 12,
-          url: '/static/show/big/p13.jpg',
-          url1: '/static/show/small/p13.png',
-          title: 'ScenesConcept'
+          src: '/static/show/big/p13.jpg',
+          url: '/static/show/small/p13.png',
+          w: 1920,
+          h: 1080
         }
       ]
+    }
+  },
+  methods: {
+    showPhotoSwipe (index) {
+      this.isOpen = true
+      this.$set(this.options, 'index', index)
+    },
+    hidePhotoSwipe () {
+      this.isOpen = false
     }
   }
 }

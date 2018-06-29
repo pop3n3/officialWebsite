@@ -16,7 +16,7 @@
      <keep-alive>
       <router-view @switchroute="switchRoute"></router-view>
      </keep-alive>
-  <lg-preview></lg-preview>
+  <!-- <lg-preview></lg-preview> -->
   </div>
 </template>
 <script>
