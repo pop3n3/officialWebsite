@@ -167,6 +167,9 @@ export default {
   },
   methods: {
     scrollf: function () {
+      if (this.$route.path !== '/') {
+        return
+      }
       let offset = 4.0 * document.documentElement.clientWidth / 1349.0
       var scrodiv = document.getElementById('content1')
       var hT = scrodiv.offsetTop

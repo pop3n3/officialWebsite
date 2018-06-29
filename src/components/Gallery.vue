@@ -37,57 +37,48 @@
           v-preview="imgs[0].url"
           v-bind:src="imgs[0].url1"
           :alt="imgs[0].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[1].url"
           v-bind:src="imgs[1].url1"
           :alt="imgs[1].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[2].url"
           v-bind:src="imgs[2].url1"
           :alt="imgs[2].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[3].url"
           v-bind:src="imgs[3].url1"
           :alt="imgs[3].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[4].url"
           v-bind:src="imgs[4].url1"
           :alt="imgs[4].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
-
       <img class="little1"
           v-preview="imgs[5].url"
           v-bind:src="imgs[5].url1"
           :alt="imgs[5].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little2"
           v-preview="imgs[6].url"
           v-bind:src="imgs[6].url1"
           :alt="imgs[6].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[7].url"
           v-bind:src="imgs[7].url1"
           :alt="imgs[7].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
 
@@ -95,35 +86,30 @@
           v-preview="imgs[8].url"
           v-bind:src="imgs[8].url1"
           :alt="imgs[8].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[9].url"
           v-bind:src="imgs[9].url1"
           :alt="imgs[9].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[10].url"
           v-bind:src="imgs[10].url1"
           :alt="imgs[10].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[11].url"
           v-bind:src="imgs[11].url1"
           :alt="imgs[11].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
       <img class="little1"
           v-preview="imgs[12].url"
           v-bind:src="imgs[12].url1"
           :alt="imgs[12].title"
-          :key="index"
           preview-title-enable="true"
           preview-nav-enable="true">
     </table>
@@ -146,71 +132,85 @@ export default {
   activated: function () {
     this.$emit('switchroute', '/gallery')
   },
+  components: {
+  },
   data () {
     return {
-      // titleimg:""
       imgs: [
         {
           url: '/static/show/big/p1.jpg',
           url1: '/static/show/small/p1.png',
-          title: 'CharacterConcept'
+          title: 'CharacterConcept',
+          index: 0
         },
         {
+          index: 1,
           url: '/static/show/big/p2.jpg',
           url1: '/static/show/small/p2.png',
           title: 'CharacterConcept'
         },
         {
+          index: 2,
           url: '/static/show/big/p3.jpg',
           url1: '/static/show/small/p3.png',
           title: 'CharacterConcept'
         },
         {
+          index: 3,
           url: '/static/show/big/p4.jpg',
           url1: '/static/show/small/p4.png',
           title: 'CharacterConcept'
         },
         {
+          index: 4,
           url: '/static/show/big/p5.jpg',
           url1: '/static/show/small/p5.png',
           title: 'CharacterConcept'
         },
         {
+          index: 5,
           url: '/static/show/big/p6.jpg',
           url1: '/static/show/small/p6.png',
           title: 'CharacterConcept'
         },
         {
+          index: 6,
           url: '/static/show/big/p7.png',
           url1: '/static/show/small/p7.png',
           title: 'ScenesConcept'
         },
         {
+          index: 7,
           url: '/static/show/big/p8.jpg',
           url1: '/static/show/small/p8.png',
           title: 'CharacterConcept'
         },
         {
+          index: 8,
           url: '/static/show/big/p9.jpg',
           url1: '/static/show/small/p9.png',
           title: 'ScenesConcept'
         },
         {
+          index: 9,
           url: '/static/show/big/p10.png',
           url1: '/static/show/small/p10.png',
           title: 'ScenesConcept'
         },
         {
+          index: 10,
           url: '/static/show/big/p11.png',
           url1: '/static/show/small/p11.png',
           title: 'ScenesConcept'
         },
         {
+          index: 11,
           url: '/static/show/big/p12.jpg',
           url1: '/static/show/small/p12.png',
           title: 'ScenesConcept'
         },
         {
+          index: 12,
           url: '/static/show/big/p13.jpg',
           url1: '/static/show/small/p13.png',
           title: 'ScenesConcept'

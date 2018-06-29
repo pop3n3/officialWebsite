@@ -91,6 +91,9 @@ export default {
   },
   methods: {
     scrollf: function () {
+      if (this.$route.path !== '/aboutus') {
+        return
+      }
       var scrodiv = document.getElementById('inTroduce')
       var hT = scrodiv.offsetTop
       var hH = scrodiv.offsetHeight
