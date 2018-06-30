@@ -33,28 +33,63 @@
     </table>
     <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>—2D作品展示—</b></font></p>
     <table align="center">
-        <img class="little1" @click="showPhotoSwipe(0,items)" v-bind:src="imgs[0].url">
-        <img class="little1" @click="showPhotoSwipe(1,items)" v-bind:src="imgs[1].url">
-        <img class="little1" @click="showPhotoSwipe(2,items)" v-bind:src="imgs[2].url">
-        <img class="little1" @click="showPhotoSwipe(3,items)" v-bind:src="imgs[3].url">
-        <img class="little1" @click="showPhotoSwipe(4,items)" v-bind:src="imgs[4].url">
-        <img class="little1" @click="showPhotoSwipe(5,items)" v-bind:src="imgs[5].url">
-        <img class="little2" @click="showPhotoSwipe(6,items)" v-bind:src="imgs[6].url">
-        <img class="little1" @click="showPhotoSwipe(7,items)" v-bind:src="imgs[7].url">
-        <img class="little1" @click="showPhotoSwipe(8,items)" v-bind:src="imgs[8].url">
-        <img class="little1" @click="showPhotoSwipe(9,items)" v-bind:src="imgs[9].url">
-        <img class="little1" @click="showPhotoSwipe(10,items)" v-bind:src="imgs[10].url">
-        <img class="little1" @click="showPhotoSwipe(11,items)" v-bind:src="imgs[11].url">
-        <img class="little1" @click="showPhotoSwipe(12,items)" v-bind:src="imgs[12].url">
+        <img class="little1" @click="showPhotoSwipe(0,imgs)" v-bind:src="imgs[0].url">
+        <img class="little1" @click="showPhotoSwipe(1,imgs)" v-bind:src="imgs[1].url">
+        <img class="little1" @click="showPhotoSwipe(2,imgs)" v-bind:src="imgs[2].url">
+        <img class="little1" @click="showPhotoSwipe(3,imgs)" v-bind:src="imgs[3].url">
+        <img class="little1" @click="showPhotoSwipe(4,imgs)" v-bind:src="imgs[4].url">
+        <img class="little1" @click="showPhotoSwipe(5,imgs)" v-bind:src="imgs[5].url">
+        <img class="little2" @click="showPhotoSwipe(6,imgs)" v-bind:src="imgs[6].url">
+        <img class="little1" @click="showPhotoSwipe(7,imgs)" v-bind:src="imgs[7].url">
+        <img class="little1" @click="showPhotoSwipe(8,imgs)" v-bind:src="imgs[8].url">
+        <img class="little1" @click="showPhotoSwipe(9,imgs)" v-bind:src="imgs[9].url">
+        <img class="little1" @click="showPhotoSwipe(10,imgs)" v-bind:src="imgs[10].url">
+        <img class="little1" @click="showPhotoSwipe(11,imgs)" v-bind:src="imgs[11].url">
+        <img class="little1" @click="showPhotoSwipe(12,imgs)" v-bind:src="imgs[12].url">
     </table>
-   
+    <div class="pswp" tabindex="-1" role= "dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div>
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                              <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                  </div>
+                </div>
+        </div>
   </div>
 </template>
 <script>
-// import 'photoswipe/dist/photoswipe.css'
-// import 'photoswipe/dist/default-skin/default-skin.css'
-// import PhotoSwipe from 'photoswipe/dist/photoswipe'
-// import PhotoSwipeDefaultUI from 'photoswipe/dist/photoswipe-ui-default'
+import 'photoswipe/dist/photoswipe.css'
+import 'photoswipe/dist/default-skin/default-skin.css'
+import PhotoSwipe from 'photoswipe/dist/photoswipe'
+import PhotoSwipeDefaultUI from 'photoswipe/dist/photoswipe-ui-default'
 export default {
   name: 'Gallery',
   activated: function () {
@@ -148,19 +183,22 @@ export default {
     }
   },
   methods: {
-    // showPhotoSwipe (index,items) {
-    //   var pswpElement = document.querySelectorAll('.pswp')[0];
-    //   var options = {      
-    //     history: false,
-    //     focus: false,
-    //     showAnimationDuration: 0,
-    //     hideAnimationDuration: 0,
-    //     index: index,
-    //     shareEl: false
-    //   };
-    //   var gallery = new PhotoSwipe( pswpElement, PhotoSwipeDefaultUI, items, options);
-    //   gallery.init();
-    // }
+    showPhotoSwipe: function (index, items) {
+      var pswpElement = document.querySelectorAll('.pswp')[0]
+      var options = {
+        history: false,
+        focus: false,
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0,
+        index: index,
+        shareEl: false,
+        loadingIndicatorDelay: 1000,
+        preloaderEl: true,
+        closeOnScroll: false
+      }
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeDefaultUI, items, options)
+      gallery.init()
+    }
   },
   mounted: function () {
     this.now = this.titleimags[0]
