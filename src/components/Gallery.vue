@@ -32,66 +32,36 @@
     </tr>
     </table>
     <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>—2D作品展示—</b></font></p>
-    <table class="paragraph" align="center">
-        <img class="little1" @click="showPhotoSwipe(0)" v-bind:src="imgs[0].url">
-        <img class="little1" @click="showPhotoSwipe(1)" v-bind:src="imgs[1].url">
-        <img class="little1" @click="showPhotoSwipe(2)" v-bind:src="imgs[2].url">
-        <img class="little1" @click="showPhotoSwipe(3)" v-bind:src="imgs[3].url">
-        <img class="little1" @click="showPhotoSwipe(4)" v-bind:src="imgs[4].url">
-        <img class="little1" @click="showPhotoSwipe(5)" v-bind:src="imgs[5].url">
-        <img class="little2" @click="showPhotoSwipe(6)" v-bind:src="imgs[6].url">
-        <img class="little1" @click="showPhotoSwipe(7)" v-bind:src="imgs[7].url">
-        <img class="little1" @click="showPhotoSwipe(8)" v-bind:src="imgs[8].url">
-        <img class="little1" @click="showPhotoSwipe(9)" v-bind:src="imgs[9].url">
-        <img class="little1" @click="showPhotoSwipe(10)" v-bind:src="imgs[10].url">
-        <img class="little1" @click="showPhotoSwipe(11)" v-bind:src="imgs[11].url">
-        <img class="little1" @click="showPhotoSwipe(12)" v-bind:src="imgs[12].url">
+    <table align="center">
+        <img class="little1" @click="showPhotoSwipe(0,items)" v-bind:src="imgs[0].url">
+        <img class="little1" @click="showPhotoSwipe(1,items)" v-bind:src="imgs[1].url">
+        <img class="little1" @click="showPhotoSwipe(2,items)" v-bind:src="imgs[2].url">
+        <img class="little1" @click="showPhotoSwipe(3,items)" v-bind:src="imgs[3].url">
+        <img class="little1" @click="showPhotoSwipe(4,items)" v-bind:src="imgs[4].url">
+        <img class="little1" @click="showPhotoSwipe(5,items)" v-bind:src="imgs[5].url">
+        <img class="little2" @click="showPhotoSwipe(6,items)" v-bind:src="imgs[6].url">
+        <img class="little1" @click="showPhotoSwipe(7,items)" v-bind:src="imgs[7].url">
+        <img class="little1" @click="showPhotoSwipe(8,items)" v-bind:src="imgs[8].url">
+        <img class="little1" @click="showPhotoSwipe(9,items)" v-bind:src="imgs[9].url">
+        <img class="little1" @click="showPhotoSwipe(10,items)" v-bind:src="imgs[10].url">
+        <img class="little1" @click="showPhotoSwipe(11,items)" v-bind:src="imgs[11].url">
+        <img class="little1" @click="showPhotoSwipe(12,items)" v-bind:src="imgs[12].url">
     </table>
-    <v-photoswipe :isOpen="isOpen" :items="imgs" :options="options" @close="hidePhotoSwipe"></v-photoswipe>
-    <!-- <table class="oneshow4" align="center">
-    <tr style="float:left" v-for="(img,index) in imgs" :key="index">
-      <img class="oneshowa"
-          v-preview="img.url1"
-          v-bind:src="img.url"
-          :alt="img.title"
-          :key="index"
-          preview-title-enable="true"
-          preview-nav-enable="true">
-    </tr>
-    </table> -->
+   
   </div>
 </template>
 <script>
-import { PhotoSwipe, PhotoSwipeGallery } from 'v-photoswipe'
-import photoswipe from 'photoswipe'
+// import 'photoswipe/dist/photoswipe.css'
+// import 'photoswipe/dist/default-skin/default-skin.css'
+// import PhotoSwipe from 'photoswipe/dist/photoswipe'
+// import PhotoSwipeDefaultUI from 'photoswipe/dist/photoswipe-ui-default'
 export default {
   name: 'Gallery',
   activated: function () {
     this.$emit('switchroute', '/gallery')
   },
-  components: {
-    'v-photoswipe': PhotoSwipe,
-    'v-photoswipe-gallery': PhotoSwipeGallery,
-    photoswipe
-  },
   data () {
     return {
-      isOpen: false,
-      isOpenGallery: false,
-      options: {
-        barsSize: {top: 44, bottom: 'auto'},
-        timeToIdle: 4000,
-        timeToIdleOutside: 1000,
-        loadingIndicatorDelay: 1000,
-        closeEl: true,
-        captionEl: true,
-        fullscreenEl: true,
-        zoomEl: true,
-        shareEl: false,
-        counterEl: true,
-        arrowEl: true,
-        preloaderEl: true
-      },
       titleimags: ['/static/show/title1.png', '/static/show/title2.png', '/static/show/title3.png', '/static/show/title4.png', '/static/show/title5.png'],
       i: 0,
       now: '/static/show/title1.png',
@@ -178,13 +148,19 @@ export default {
     }
   },
   methods: {
-    showPhotoSwipe (index) {
-      this.isOpen = true
-      this.$set(this.options, 'index', index)
-    },
-    hidePhotoSwipe () {
-      this.isOpen = false
-    }
+    // showPhotoSwipe (index,items) {
+    //   var pswpElement = document.querySelectorAll('.pswp')[0];
+    //   var options = {      
+    //     history: false,
+    //     focus: false,
+    //     showAnimationDuration: 0,
+    //     hideAnimationDuration: 0,
+    //     index: index,
+    //     shareEl: false
+    //   };
+    //   var gallery = new PhotoSwipe( pswpElement, PhotoSwipeDefaultUI, items, options);
+    //   gallery.init();
+    // }
   },
   mounted: function () {
     this.now = this.titleimags[0]
