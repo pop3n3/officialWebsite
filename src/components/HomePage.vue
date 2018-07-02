@@ -1,6 +1,7 @@
 <template>
 <div>
-  <div id="bgDiv" class="bg" v-bind:style="[styleBgY,styleBgHeight]">
+  <div class="jarallax" v-bind:style="{minHeight:bgMinHeight}">
+    <img class="jarallax-img" :src="bgUrl">
     <div class="stencil">
        <div class="bgDiv">
        <p class="big bigPos1">欢迎来到</p>
@@ -102,11 +103,16 @@
 </div>
 </template>
 <script>
+const jarallax = require('jarallax/src/jarallax.esm').default
 export default {
   name: 'HomePage',
   data () {
     return {
-      email: 'sichuan@scdianzhi.com ',
+      bgMinHeight: 0 + 'px',
+      parallaxSpeed: 0.2,
+      imgPosition: '50% 100%',
+      bgUrl: '/static/homePage/homeBg.jpg',
+      email: 'sichuan@scdianzhi.com',
       phone0: '028 86160582',
       phone1: '+86 18328482858',
       addr: '成都市高新区吉泰五路88号香年广场T2栋30楼',
@@ -114,14 +120,6 @@ export default {
         {name: '程伟', qq: '18877143', id: 0},
         {name: '安芯', qq: '124452539', id: 1}
       ],
-      styleBgY: {
-        backgroundPositionY: 100 + '%'
-      },
-      styleBgHeight: {
-        height: 780 + 'px'
-      },
-      bgMaxHeight: 780.0,
-      lastST: 0,
       show1: false,
       show2: false,
       show3: false,
@@ -151,26 +149,35 @@ export default {
     }
   },
   mounted: function () {
+    this.computeBgHeight()
+    jarallax(document.querySelectorAll('.jarallax'), {
+      imgPosition: this.imgPosition,
+      speed: this.parallaxSpeed
+    })
     this.scrollf()
-    this.styleBgY = {
-      backgroundPositionY: 100 + '%'
-    }
-    this.styleBgHeight = {
-      height: 780 + 'px'
-    }
     window.addEventListener('scroll', () => {
       this.scrollf()
     })
+    window.onresize = () => {
+      return (() => {
+        this.computeBgHeight()
+      })()
+    }
   },
   activated: function () {
     this.$emit('switchroute', '/')
   },
   methods: {
+    computeBgHeight: function () {
+      var clientHeight = document.documentElement.clientHeight
+      let diff = 150
+      var rs = clientHeight - diff
+      this.bgMinHeight = rs + 'px'
+    },
     scrollf: function () {
       if (this.$route.path !== '/') {
         return
       }
-      let offset = 4.0 * document.documentElement.clientWidth / 1349.0
       var scrodiv = document.getElementById('content1')
       var hT = scrodiv.offsetTop
       var hH = scrodiv.offsetHeight
@@ -179,35 +186,6 @@ export default {
       if (wS === 0) {
         wS = document.body.scrollTop
       }
-      var top = wS
-      let bgMaxHeight = this.bgMaxHeight
-      // var bgDiv = document.getElementById('bgDiv')
-      // var bgH = bgDiv.offsetHeight
-      let maxY = 100.0
-      var y = (top * offset / wH) * 100.0
-      if (y > maxY) {
-        y = maxY
-      }
-      y = maxY - y
-      if (y <= 0) {
-        if (this.lastST === 0) {
-          this.lastST = wS
-        }
-        var rsh = (1.0 - (wS - this.lastST) / wH) * bgMaxHeight
-        if (rsh > bgMaxHeight) {
-          rsh = bgMaxHeight
-        }
-        // this.styleBgHeight = {
-        //   height: rsh + 'px'
-        // }
-      } else if (y >= 100) {
-        // this.styleBgHeight = {
-        //   height: bgMaxHeight + 'px'
-        // }
-      }
-      // this.styleBgY = {
-      //   backgroundPositionY: y + '%'
-      // }
       if (wS > (hT + hH * 0.4 - wH)) {
         this.show1 = true
         this.show2 = true
@@ -230,14 +208,8 @@ export default {
 }
 </script>
 <style scoped>
-.bg{
-  background: url('/static/homePage/homeBg.jpg') no-repeat center center;
-  width: 100%;
-  background-size: cover;
-  position: relative;
-  /* transition: height 0.001s; */
-  background-attachment: fixed;
-  /* transition: background-position-y 0.001s; */
+.jarallax {
+    position: relative;
 }
 .stencil{
   width:100%;
