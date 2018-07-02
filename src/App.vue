@@ -100,7 +100,7 @@ export default {
    width: 100%;
 }
 .navTitleImg{
-  margin-left:3.7%;
+  margin-left:120px;
   margin-top:1%;
   margin-bottom:1%;
 }
