@@ -1,6 +1,7 @@
 <template>
 <div>
-  <div class="jarallax" v-bind:style="{minHeight:bgMinHeight}">
+  <!-- v-bind:style="{minHeight:bgMinHeight}" -->
+  <div class="jarallax">
     <img class="jarallax-img" :src="bgUrl">
     <div class="stencil">
        <div class="bgDiv">
@@ -103,13 +104,13 @@
 </div>
 </template>
 <script>
-const jarallax = require('jarallax/src/jarallax.esm').default
+import {jarallax} from 'jarallax'
 export default {
   name: 'HomePage',
   data () {
     return {
       bgMinHeight: 0 + 'px',
-      parallaxSpeed: 0.2,
+      parallaxSpeed: 0.1,
       imgPosition: '50% 100%',
       bgUrl: '/static/homePage/homeBg.jpg',
       email: 'sichuan@scdianzhi.com',
