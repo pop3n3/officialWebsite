@@ -52,6 +52,8 @@
             </tr>
           </table>
           </transition>
+          </td>
+          <td>
           <table class="textTable" style="width:800px">
           <font style="font-family:'fzzhengheis-eb-gbregular';" size="6"> <b>公司<br></b></font>
           <font size="4"> 成都典致网络有限公司成立于2018年，专注于PC、移动端的美术外包服务，提供游戏角色、场景、特效等设计和游戏2D 和3D美术在内的全方位服务方案。</font>
@@ -139,15 +141,16 @@ background-color: #6876dc;
   padding:0;
 }
 .imgTable{
-  position:absolute;
+  /* position:absolute; */
   margin:0;
-  left:318px;
+  float:right;
   top:60px;
 }
 .textTable{
-  position:absolute;
+  /* position:absolute; */
   margin:0;
-  left:850px;
+  /* left:850px; */
+  float: left;
   top:124px;
 }
 .slidefade-enter-active {
