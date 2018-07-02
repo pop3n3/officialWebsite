@@ -208,8 +208,11 @@ export default {
 }
 </script>
 <style scoped>
+* {
+  -webkit-font-smoothing: antialiased;
+}
 .jarallax {
-    position: relative;
+  position: relative;
 }
 .stencil{
   width:100%;

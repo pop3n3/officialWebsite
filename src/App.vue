@@ -82,6 +82,9 @@ export default {
 }
 </script>
 <style>
+* {
+  -webkit-font-smoothing: antialiased;
+}
 @font-face{
   font-family:'fzzhengheis-eb-gbregular';
   src:url('./fonts/_.ttf');
