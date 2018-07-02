@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="jarallax" v-bind:style="{minHeight:bgMinHeight}">
-    <img class="jarallax-img" :src="bgUrl">
+    <progressive-img class="jarallax-img" :src="bgUrl" placeholder="/static/placeholder1.jpg" :blur="30"/>
     <div class="stencil">
        <div class="bgDiv">
        <p class="big bigPos1">欢迎来到</p>
@@ -110,7 +110,7 @@ export default {
     return {
       bgMinHeight: 0 + 'px',
       parallaxSpeed: 0.1,
-      imgPosition: '50% 50%',
+      imgPosition: '50% 100%',
       bgUrl: '/static/homePage/homeBg.jpg',
       email: 'sichuan@scdianzhi.com',
       phone0: '028 86160582',
@@ -170,7 +170,7 @@ export default {
   methods: {
     computeBgHeight: function () {
       var clientHeight = document.documentElement.clientHeight
-      let diff = 120
+      let diff = 40 + 67
       var rs = clientHeight - diff
       this.bgMinHeight = rs + 'px'
     },
@@ -210,6 +210,10 @@ export default {
 <style scoped>
 .jarallax {
   position: relative;
+  margin:auto;
+}
+.jarallax-img{
+  width: auto;
 }
 .stencil{
   width:100%;
