@@ -19,15 +19,15 @@
       </td>
       <td style="height:30%;width:50%;">
         <font style="font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;" size="6"> <b>我们提供服务:<br><br></b></font>
-        <font style="font-weight:normal;" size="5"> Web Game Out•sourcing网页游戏美术整包<br>Mobile Game Outsourcing手机游戏美术整包</font>
+        <font style="font-weight:normal;" size="4"> Web Game Out•sourcing网页游戏美术整包<br>Mobile Game Outsourcing手机游戏美术整包</font>
         <br>
         <br>
         <font style="font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;" size="6"> <b>2D<br></b></font>
-        <font style="font-weight:normal;" size="5"> 游戏角色概念设计Conceptual Design of game character<br>游戏场景概念设计Conceptual Design of game scenes<br>游戏特效制作Game effects</font>
+        <font style="font-weight:normal;" size="4"> 游戏角色概念设计Conceptual Design of game character<br>游戏场景概念设计Conceptual Design of game scenes<br>游戏特效制作Game effects</font>
         <br>
         <br>
         <font style="font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;" size="6"> <b>角色美术<br></b></font>
-        <font size="5"> 角色美术外包Characters<br>场景美术外包Art design in scenes<br>游戏美术整包Whole games</font>
+        <font size="4"> 角色美术外包Characters<br>场景美术外包Art design in scenes<br>游戏美术整包Whole games</font>
       </td>
     </tr>
     </table>
