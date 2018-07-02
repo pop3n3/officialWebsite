@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="jarallax" v-bind:style="{minHeight:bgMinHeight}">
-    <img class="jarallax-img" :src="bgUrl">
+    <progressive-img class="jarallax-img" :src="bgUrl" placeholder="/static/placeholder1.jpg" :blur="30"/>
     <div class="stencil">
        <div class="bgDiv">
        <p class="big bigPos1">欢迎来到</p>
@@ -208,9 +208,6 @@ export default {
 }
 </script>
 <style scoped>
-* {
-  -webkit-font-smoothing: antialiased;
-}
 .jarallax {
   position: relative;
 }
