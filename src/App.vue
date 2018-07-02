@@ -101,8 +101,8 @@ export default {
 }
 .navTitleImg{
   margin-left:120px;
-  margin-top:1%;
-  margin-bottom:1%;
+  margin-top:20px;
+  margin-bottom:20px;
 }
 .navTitleDiv{
   float:right;

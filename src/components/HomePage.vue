@@ -109,7 +109,7 @@ export default {
   data () {
     return {
       bgMinHeight: 0 + 'px',
-      parallaxSpeed: 0.2,
+      parallaxSpeed: 0.1,
       imgPosition: '50% 100%',
       bgUrl: '/static/homePage/homeBg.jpg',
       email: 'sichuan@scdianzhi.com',
@@ -170,7 +170,7 @@ export default {
   methods: {
     computeBgHeight: function () {
       var clientHeight = document.documentElement.clientHeight
-      let diff = 150
+      let diff = 40 + 67
       var rs = clientHeight - diff
       this.bgMinHeight = rs + 'px'
     },
@@ -210,6 +210,10 @@ export default {
 <style scoped>
 .jarallax {
   position: relative;
+  margin:auto;
+}
+.jarallax-img{
+  width: auto;
 }
 .stencil{
   width:100%;
