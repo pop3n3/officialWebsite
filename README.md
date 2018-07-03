@@ -1,6 +1,5 @@
-# testdev
-
-> A Vue.js project
+兼容ie,360等,因为不支持插件的es6语语法
+把src下的replace插件源码替换到对应node_modules目录中
 
 ## Build Setup
 

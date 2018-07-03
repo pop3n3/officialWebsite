@@ -5,7 +5,7 @@
     <div class="stencil">
        <div class="bgDiv">
        <p class="big bigPos1">欢迎来到</p>
-       <p class="big bigPos2">典致网络<span class="small">游戏美术外包整改方案</span></p>
+       <p class="big bigPos2">典致网络<span class="small">游戏美术外包解决方案</span></p>
        </div>
     </div>
   </div>
