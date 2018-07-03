@@ -3,7 +3,7 @@
     <div class="oneshow1">
       <br>
       <br>
-      <p style="text-indent:25em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>+作品展示 </b></font></p>
+      <p style="text-indent:25em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>◆作品展示 </b></font></p>
       <br>
       <br>
       <br>
