@@ -3,7 +3,7 @@
    <div class="title">
      <br>
       <br>
-      <p style="text-indent:25em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>◆关于我们 </b></font></p>
+      <p style="text-indent:7em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 57px;"><b>◆关于我们 </b></p>
       <br>
       <br>
       <br>
