@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="jarallax" v-bind:style="{minHeight:bgMinHeight}">
-    <progressive-img class="jarallax-img" :src="bgUrl" placeholder="/static/placeholder1.jpg" :blur="30"/>
+    <progressive-img class="jarallax-img" :src="bgUrl.src" :placeholder="bgUrl.placeholder"/>
     <div class="stencil">
        <div class="bgDiv">
        <p class="big bigPos1">欢迎来到</p>
@@ -19,7 +19,9 @@
     <table class="content1Table" cellpadding="0" cellspacing="0">
       <transition name="fade">
       <tr v-if="show2">
-      <td v-for="item in coreitems" :key="item.id"><img v-bind:src="item.url"></td>
+      <td v-for="item in coreitems" :key="item.id">
+        <progressive-img class="coreItemImg" v-bind:src="item.url" :placeholder="item.placeholder"/>
+      </td>
       </tr>
       </transition>
       <tr>
@@ -68,7 +70,7 @@
     <div v-if="show4">合作伙伴</div>
     </transition>
     <transition name="slidefade">
-    <img v-if="show5" src="../assets/homePage/hzhb.png">
+    <progressive-img class="partnerImg" v-if="show5" :src="partnerImg.src" :placeholder="partnerImg.placeholder"/>
     </transition>
   </div>
   <div class="contactus">
@@ -111,7 +113,14 @@ export default {
       bgMinHeight: 0 + 'px',
       parallaxSpeed: 0.1,
       imgPosition: '50% 100%',
-      bgUrl: '/static/homePage/homeBg.jpg',
+      bgUrl: {
+        src: '/static/homePage/homeBg.jpg',
+        placeholder: '/static/homePage/placeholder/homeBg.jpg'
+      },
+      partnerImg: {
+        src: '/static/homePage/hzhb.png',
+        placeholder: '/static/homePage/placeholder/hzhb.png'
+      },
       email: 'sichuan@scdianzhi.com',
       phone0: '028 86160582',
       phone1: '+86 18328482858',
@@ -126,10 +135,10 @@ export default {
       show4: false,
       show5: false,
       coreitems: [
-        {url: '/static/homePage/sy_1.png', id: 0, desc: '宣传画'},
-        {url: '/static/homePage/sy_2.png', id: 1, desc: '角色设计'},
-        {url: '/static/homePage/sy_3.png', id: 2, desc: '3D角色建模以及贴图'},
-        {url: '/static/homePage/sy_4.png', id: 3, desc: '3D场景建模以及贴图'}
+        {url: '/static/homePage/sy_1.png', placeholder: '/static/homePage/placeholder/sy_1.png', id: 0, desc: '宣传画'},
+        {url: '/static/homePage/sy_2.png', placeholder: '/static/homePage/placeholder/sy_2.png', id: 1, desc: '角色设计'},
+        {url: '/static/homePage/sy_3.png', placeholder: '/static/homePage/placeholder/sy_3.png', id: 2, desc: '3D角色建模以及贴图'},
+        {url: '/static/homePage/sy_4.png', placeholder: '/static/homePage/placeholder/sy_4.png', id: 3, desc: '3D场景建模以及贴图'}
       ],
       coreDesc: [
         {desc: '我们的设计师全部在知名艺术院校受过正规美术教育，精通2D和3D制作软件和工具，帮助消除客户在创造力和市场潜力方面的障碍，递交更多内容，缩短产品问世时间，并对成本进行控制。'},
@@ -562,5 +571,15 @@ margin-left:104px;
   color: white;
   font-size: 16px;
   margin-left:9px;
+}
+.partnerImg{
+  width: 546px;
+  height: 243px;
+  margin: auto;
+}
+.coreItemImg{
+  width: 214px;
+  height: 200px;
+  margin: auto;
 }
 </style>
