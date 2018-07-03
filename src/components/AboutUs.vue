@@ -55,16 +55,14 @@
           </td>
           <td>
           <table class="textTable" style="width:800px">
-          <font style="font-family:'fzzhengheis-eb-gbregular';" size="6"> <b>公司<br></b></font>
-          <font size="4"> 成都典致网络有限公司成立于2018年，专注于PC、移动端的美术外包服务，提供游戏角色、场景、特效等设计和游戏2D 和3D美术在内的全方位服务方案。</font>
+          <p style="font-family:'fzzhengheis-eb-gbregular';font-size: 24px;margin-top:-20px;"> <b>公司<br></b></p>
+          <p style="font-size: 16px;"> 成都典致网络有限公司成立于2018年，专注于PC、移动端的美术外包服务，提供游戏角色、场景、特效等设计和游戏2D 和3D美术在内的全方位服务方案。</p>
           <br>
+          <p style="font-family:'fzzhengheis-eb-gbregular';font-size: 24px;"> <b>团队<br></b></p>
+          <p style="font-size: 16px;"> 能够满足客户各种美术设计需求。公司以精益求精、服务客户为导航，为每一位客户提供个性、专业、独特、高效的美术支持，致力于成为一个集各类网络游戏、手机游戏、休闲游戏等为一体的美术服务商。</p>
           <br>
-          <font style="font-family:'fzzhengheis-eb-gbregular';" size="6"> <b>团队<br></b></font>
-          <font size="4"> 能够满足客户各种美术设计需求。公司以精益求精、服务客户为导航，为每一位客户提供个性、专业、独特、高效的美术支持，致力于成为一个集各类网络游戏、手机游戏、休闲游戏等为一体的美术服务商。</font>
-          <br>
-          <br>
-          <font style="font-family:'fzzhengheis-eb-gbregular';" size="6"> <b>经验<br></b></font>
-          <font size="4"> 目前团队参与多个项目，服务多家游戏研发商，签订长期合作框架协议的企业超过20家，典致以游戏美术和艺术结合为宗旨，与客户携手并进，追求卓越。</font>
+          <p style="font-family:'fzzhengheis-eb-gbregular';font-size: 24px;"> <b>经验<br></b></p>
+          <p style="font-size: 16px;"> 目前团队参与多个项目，服务多家游戏研发商，签订长期合作框架协议的企业超过20家，典致以游戏美术和艺术结合为宗旨，与客户携手并进，追求卓越。</p>
           </table>
         </td>
       </tr>

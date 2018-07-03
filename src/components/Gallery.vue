@@ -8,30 +8,26 @@
       <br>
       <br>
     </div>
-    <table class="oneshow2" align="center" border="0">
+    <div class="oneshow2">
       <img :src="now">
-    </table>
+    </div>
     <table class="oneshow3" align="center" cellspacing="100">
     <tr>
-      <td style="height:30%;width:50%;letter-spacing:1px;">
-      <p style="height:30%;width:80%;margin-left:20%;margin-top:-15px;" ><font size="5">典致网络专业提供美术外包服务，为每位客户提供全方位的美术解决方案。在游戏行业拥有丰富的专业经验和执行能力，核心成员更是参与过国内众多以美术制作精良著称的游戏项目，拥有精良的画面品质和优秀的设计能力。在项目经验和基础素质方面无可替代！<br>美术风格涵盖：日韩、欧美、Q版、写实、现代等，无论是2D还是3D，或是动作、特效，我们团队都竭力奉献自己的能量，帮助客户在美术环节达到最佳的视觉呈现效果。
-    </font></p>
+      <td style="height:30%;width:500px;letter-spacing:1px;">
+      <p style="height:30%;width:80%;margin-left:20%;margin-top:-15px;font-size: 17px;" >典致网络专业提供美术外包服务，为每位客户提供全方位的美术解决方案。在游戏行业拥有丰富的专业经验和执行能力，核心成员更是参与过国内众多以美术制作精良著称的游戏项目，拥有精良的画面品质和优秀的设计能力。在项目经验和基础素质方面无可替代！<br>美术风格涵盖：日韩、欧美、Q版、写实、现代等，无论是2D还是3D，或是动作、特效，我们团队都竭力奉献自己的能量，帮助客户在美术环节达到最佳的视觉呈现效果。
+      </p>
       </td>
-      <td style="height:30%;width:50%;">
-        <font style="font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;" size="6"> <b>我们提供服务:<br><br></b></font>
-        <font style="font-weight:normal;" size="4"> Web Game Out•sourcing网页游戏美术整包<br>Mobile Game Outsourcing手机游戏美术整包</font>
-        <br>
-        <br>
-        <font style="font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;" size="6"> <b>2D<br></b></font>
-        <font style="font-weight:normal;" size="4"> 游戏角色概念设计Conceptual Design of game character<br>游戏场景概念设计Conceptual Design of game scenes<br>游戏特效制作Game effects</font>
-        <br>
-        <br>
-        <font style="font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;" size="6"> <b>角色美术<br></b></font>
-        <font size="4"> 角色美术外包Characters<br>场景美术外包Art design in scenes<br>游戏美术整包Whole games</font>
+      <td style="width:500px;" >
+        <p style="font-family:'fzzhengheis-eb-gbregular';">我们提供服务:</p>
+        <p style="font-weight:normal;font-size: 17px;"> Web Game Out•sourcing网页游戏美术整包<br>Mobile Game Outsourcing手机游戏美术整包</p>
+        <p style="font-family:'fzzhengheis-eb-gbregular';font-size: 17px;">2D</p>
+        <p style="font-weight:normal;font-size: 17px;margin-top:-17px;"> 游戏角色概念设计Conceptual Design of game character<br>游戏场景概念设计Conceptual Design of game scenes<br>游戏特效制作Game effects</p>
+        <p style="font-family:'fzzhengheis-eb-gbregular';font-size: 17px;">角色美术</p>
+        <p style="font-size: 17px;margin-top:-17px;"> 角色美术外包Characters<br>场景美术外包Art design in scenes<br>游戏美术整包Whole games</p>
       </td>
     </tr>
     </table>
-    <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;"><font size="10"> <b>—2D作品展示—</b></font></p>
+    <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 54px;"><b>—2D作品展示—</b></p>
     <table align="center">
         <img class="little1" @click="showPhotoSwipe(0,imgs)" v-bind:src="imgs[0].url">
         <img class="little1" @click="showPhotoSwipe(1,imgs)" v-bind:src="imgs[1].url">
