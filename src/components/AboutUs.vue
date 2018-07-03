@@ -16,7 +16,7 @@
       <tr>
         <td style="letter-spacing:1px;position:relative;">
           <transition name="slidefade">
-          <table v-if="show1" class="imgTable" style="width:500px;">
+          <table v-if="show1" class="imgTable" style="width:500px;margin-left:100px;">
             <tr>
             <td style="width:140">
             <img src="/static/about/introduce/p1.png">
