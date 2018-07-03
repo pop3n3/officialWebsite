@@ -436,7 +436,7 @@ export default {
   width: 100%;
   margin:0;
   padding:0;
-  height:460px;
+  height:400px;
   text-align: center;
 }
 #partner div{
@@ -444,7 +444,7 @@ export default {
   font-weight: normal;
   font-size: 64px;
   margin-top:60px;
-  margin-bottom: 70px;
+  margin-bottom: -75px;
 }
 .contactus{
   height:390px;
@@ -573,8 +573,8 @@ margin-left:104px;
   margin-left:9px;
 }
 .partnerImg{
-  width: 546px;
-  height: 243px;
+  width: 722px;
+  height: 329px;
   margin: auto;
 }
 .coreItemImg{
