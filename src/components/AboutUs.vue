@@ -6,7 +6,6 @@
       <p style="text-indent:7em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 57px;"><b>◆关于我们 </b></p>
       <br>
       <br>
-      <br>
    </div>
    <div class="bg">
      <img style="width: 100%;" v-bind:src="title1">
