@@ -397,6 +397,7 @@ export default {
   margin-top:60px;
   height:154px;
 }
+
 .appraise_title{
   font-family:'fzzhengheis-eb-gbregular';
   font-weight: normal;
