@@ -25,11 +25,13 @@
       </td>
     </tr>
     </table>
-    <div align="center">
-          <img style="position:absolute;margin-top:35px;margin-left:-450px;" src="../assets/zp_hg.png">
-          <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 30px;"><b>2D作品展示</b></p>
-          <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 20px;color:#acaebf;margin-top:-35px;"><b>WORKS SHOW</b></p>
-          <img style="position:absolute;margin-top:-44px;margin-left:120px;" src="../assets/zp_hg.png">
+    <div class="titleDiv">
+          <img class="leftLine" src="../assets/zp_hg.png">
+          <div>
+             <p class="p1"><b>2D作品展示</b></p>
+             <p class="p2"><b>WORKS SHOW</b></p>
+          </div>
+          <img class="rightLine" src="../assets/zp_hg.png">
     </div>
     <table align="center">
         <img class="little1" @click="showPhotoSwipe(0,imgs)" v-bind:src="imgs[0].url">
@@ -187,6 +189,41 @@ export default {
    width: 100%;
    height: 100%;
 } */
+.titleDiv{
+  margin: auto;
+  width:930px;
+  height: 90px;
+  position: relative;
+  text-align:center;
+}
+.leftLine{
+  position:absolute;
+  left:0px;
+  margin-top:35px;
+}
+.rightLine{
+  position:absolute;
+  margin-top:35px;
+  right:0px;
+}
+.titleDiv div{
+  position:absolute;
+  height:100%;
+  width: 182px;
+  margin-left:374px;
+}
+.p1{
+  margin-top:0px;
+  margin-bottom:4px;
+  font-family:'fzzhengheis-eb-gbregular';
+  font-size: 30px;
+}
+.p2{
+  margin-top:0px;
+  margin-bottom:0px;
+  font-family:'fzzhengheis-eb-gbregular';
+  font-size: 20px;color:#acaebf;
+}
 
 .little1{
   /* height:295px;
