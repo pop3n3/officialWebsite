@@ -2,7 +2,8 @@
   <div>
    <div class="title">
      <br>
-      <p style="text-indent:7em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 57px;"><b>◆关于我们 </b></p>
+     <img class="icon" src="../assets/black.png">
+      <p style="text-indent:7em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 57px;color:#21184a"><b>关于我们 </b></p>
       <br>
    </div>
    <div class="bg">
@@ -120,7 +121,7 @@ export default {
 </script>
 <style scoped>
 .title{
-background-color: #6876dc;
+background-color: #d1dfff;
 }
 .bg{
 
@@ -134,6 +135,11 @@ background-color: #6876dc;
   height:100%;
   margin:0;
   padding:0;
+}
+.icon{
+  position: absolute;
+  margin-top:65px;
+  margin-left:350px;
 }
 .imgTable{
   /* position:absolute; */

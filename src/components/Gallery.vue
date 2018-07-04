@@ -2,7 +2,8 @@
   <div>
     <div class="oneshow1">
       <br>
-      <p style="text-indent:7em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 57px;"> <b>◆作品展示 </b></p>
+      <img class="icon" src="../assets/black.png">
+      <p style="text-indent:7em;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 57px;color:#21184a"> <b>作品展示 </b></p>
       <br>
     </div>
     <div class="oneshow2">
@@ -24,7 +25,12 @@
       </td>
     </tr>
     </table>
-    <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 54px;"><b>—2D作品展示—</b></p>
+    <div align="center">
+          <img style="position:absolute;margin-top:35px;margin-left:-450px;" src="../assets/zp_hg.png">
+          <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 30px;"><b>2D作品展示</b></p>
+          <p style="text-align:center;min-width:1200px;font-family:'fzzhengheis-eb-gbregular';letter-spacing:1px;font-size: 20px;color:#acaebf;margin-top:-35px;"><b>WORKS SHOW</b></p>
+          <img style="position:absolute;margin-top:-44px;margin-left:120px;" src="../assets/zp_hg.png">
+    </div>
     <table align="center">
         <img class="little1" @click="showPhotoSwipe(0,imgs)" v-bind:src="imgs[0].url">
         <img class="little1" @click="showPhotoSwipe(1,imgs)" v-bind:src="imgs[1].url">
@@ -202,13 +208,17 @@ export default {
 .little2:hover{
   opacity: 0.5;
 }
-
+.icon{
+  position: absolute;
+  margin-top:65px;
+  margin-left:350px;
+}
 .oneshowa{
    background-color: #FFFF00;
    margin-top: 0px;
 }
 .oneshow1{
-   background-color: #6876dc;
+   background-color: #d1dfff;
    width: 100%;
 }
 .oneshow2{
