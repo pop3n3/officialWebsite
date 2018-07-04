@@ -130,13 +130,13 @@ export default {
   font-weight:normal;
 }
 .navTitlelabel:hover{
-  color:#4b59bc;
+  color:#3d3955;
   border: none;
   cursor: hand;
   cursor: pointer;
 }
 .navTitlelabelVisited{
-  color: #4b59bc;
+  color: #3d3955;
 }
 .navTitlelineTransition{
   transition: margin-left 0.3s ;
@@ -146,6 +146,6 @@ export default {
   width:40px;
   height:3px;
   margin-top:0px;
-  background-color: #4b59bc;
+  background-color: #3d3955;
 }
 </style>

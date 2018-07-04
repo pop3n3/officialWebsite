@@ -11,7 +11,7 @@
   </div>
 <div id="content1">
     <div class="content1Div">
-    <img class="icon" src="../assets/homePage/black.png">
+    <img class="icon" src="../assets/black.png">
     <transition-group name="slide-fade">
     <p v-if="show1" class="font1" :key="1">核心业务</p>
     <p v-if="show1" class="font2" :key="2">保持初心 精益求精</p>
@@ -311,7 +311,7 @@ export default {
   font-family:'fzzhengheis-eb-gbregular';
   font-weight:normal;
   position: absolute;
-  color:black;
+  color:#21184a;
   font-size: 56px;
   margin-left:100px;
   margin-top:45px;
@@ -322,7 +322,7 @@ export default {
   position: absolute;
   margin-left:101px;
   margin-top:122px;
-  color:#363447;
+  color:#21184a;
   font-size: 18px;
   font-style:italic;
 }
@@ -354,7 +354,7 @@ export default {
 .content2{
   width:100%;
   height: 363px;
-  background-color:#7c8fff;
+  background-color:#d1dfff;
 }
 .content2 table{
  margin: auto;
@@ -370,7 +370,7 @@ export default {
  font-size: 20px;
  margin-top:17px;
  text-align: center;
- color:#000000;
+ color:#21184a;
  margin-bottom:0px;
 }
 .content2_desc{
@@ -400,6 +400,7 @@ export default {
 .appraise_title{
   font-family:'fzzhengheis-eb-gbregular';
   font-weight: normal;
+  color:#21184a;
   font-size: 64px;
   text-align: center;
 }
@@ -442,6 +443,7 @@ export default {
 #partner div{
   font-family:'fzzhengheis-eb-gbregular';
   font-weight: normal;
+  color:#21184a;
   font-size: 64px;
   margin-top:60px;
   margin-bottom: -75px;
