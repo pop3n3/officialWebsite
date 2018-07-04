@@ -388,7 +388,7 @@ export default {
 #appraise{
   width: 100%;
   border:0;
-  border-bottom:4px solid #7c8fff;
+  border-bottom:4px solid #d1dfff;
   margin:0;
   padding:0;
   height: 665px;
