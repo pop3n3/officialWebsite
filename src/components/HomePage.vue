@@ -230,13 +230,13 @@ export default {
   background-size:100% 100%;
   background-image: url(../assets/homePage/stencil.png);
   background-repeat:no-repeat;
-  bottom: 18.3%;
+  bottom: 21%;
   position: absolute;
 }
 .bgDiv{
   position: absolute;
   top:0;
-  left:50%;
+  left:52%;
   margin-left:-508px;
   width: 1016px;
   height:100%;
