@@ -135,10 +135,10 @@ export default {
       show4: false,
       show5: false,
       coreitems: [
-        {url: '/static/homePage/sy_1.png', placeholder: '/static/homePage/placeholder/sy_1.png', id: 0, desc: '宣传画'},
-        {url: '/static/homePage/sy_2.png', placeholder: '/static/homePage/placeholder/sy_2.png', id: 1, desc: '角色设计'},
-        {url: '/static/homePage/sy_3.png', placeholder: '/static/homePage/placeholder/sy_3.png', id: 2, desc: '3D角色建模以及贴图'},
-        {url: '/static/homePage/sy_4.png', placeholder: '/static/homePage/placeholder/sy_4.png', id: 3, desc: '3D场景建模以及贴图'}
+        {url: '/static/homePage/sy_1.png', placeholder: '/static/homePage/placeholder/sy_1.png', id: 0, desc: '游戏宣传'},
+        {url: '/static/homePage/sy_2.png', placeholder: '/static/homePage/placeholder/sy_2.png', id: 1, desc: '角色原画'},
+        {url: '/static/homePage/sy_3.png', placeholder: '/static/homePage/placeholder/sy_3.png', id: 2, desc: '3D角色建模'},
+        {url: '/static/homePage/sy_4.png', placeholder: '/static/homePage/placeholder/sy_4.png', id: 3, desc: '3D场景建模'}
       ],
       coreDesc: [
         {desc: '我们的设计师全部在知名艺术院校受过正规美术教育，精通2D和3D制作软件和工具，帮助消除客户在创造力和市场潜力方面的障碍，递交更多内容，缩短产品问世时间，并对成本进行控制。'},
@@ -151,9 +151,9 @@ export default {
         {url: '/static/homePage/sy_jg.png', id: 3, descleft: 40 + 'px', left: 152 + 'px', title: '价格', desc: '专业化的水准，给你超高性价比。'}
       ],
       appraiseText: [
-        {top: 28 + 'px', id: 0, job: '美术总监', company: '顽皮狗外包对接', desc: '“变革的时代，激烈的竞争，有您的鼎力相助，我们信心满满，愿共同扬帆起航！”'},
-        {top: 0 + 'px', id: 1, job: '美术总监', company: '顽皮狗外包对接', desc: '“有专人负责对接，沟通起来很高效，专业、高效和团队，质量上很有保障，期待和典致的下次合作。”'},
-        {top: 0 + 'px', id: 2, job: '美术总监', company: '顽皮狗外包对接', desc: '“与典致合作非常愉快，小伙伴对接项目回馈及时，项目均能按时如约完成。希望明年可以继续合作，一路相伴，携手共进。”'}
+        {top: 28 + 'px', id: 0, job: '美术经理', company: '畅游', desc: '“变革的时代，激烈的竞争，有您的鼎力相助，我们信心满满，愿共同扬帆起航！”'},
+        {top: 0 + 'px', id: 1, job: '美术总监', company: '炎龙科技', desc: '“有专人负责对接，沟通起来很高效，专业、高效和团队，质量上很有保障，期待和典致的下次合作。”'},
+        {top: 0 + 'px', id: 2, job: '研发经理', company: '欢悦互娱', desc: '“与典致合作非常愉快，小伙伴对接项目回馈及时，项目均能按时如约完成。希望明年可以继续合作，一路相伴，携手共进。”'}
       ]
     }
   },
@@ -416,14 +416,14 @@ export default {
   padding:0;
 }
 .appraise_cj{
-  width:141px;
+  width:110px;
   float: right;
 }
 .appraise_company{
-  display:table-cell;
-  vertical-align:top;
+  margin:0;
   font-size:20px;
   font-weight: normal;
+  text-align: center;
 }
 .appraise_job{
   font-size:20px;
