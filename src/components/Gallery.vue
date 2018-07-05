@@ -67,9 +67,9 @@ export default {
   },
   data () {
     return {
-      titleimags: ['/static/show/title1.png', '/static/show/title2.png', '/static/show/title3.png', '/static/show/title4.png', '/static/show/title5.png'],
+      titleimags: ['/static/show/title1.jpg', '/static/show/title2.jpg', '/static/show/title3.jpg', '/static/show/title4.jpg', '/static/show/title5.jpg'],
       i: 0,
-      now: '/static/show/title1.png',
+      now: '/static/show/title1.jpg',
       imgs: [
         {
           src: '/static/show/big/p1.jpg',
@@ -132,14 +132,14 @@ export default {
           h: 1203
         },
         {
-          src: '/static/show/big/p11.png',
-          url: '/static/show/small/p11.png',
+          src: '/static/show/big/p11.jpg',
+          url: '/static/show/small/p11.jpg',
           w: 1920,
           h: 1080
         },
         {
           src: '/static/show/big/p12.jpg',
-          url: '/static/show/small/p12.png',
+          url: '/static/show/small/p12.jpg',
           w: 1920,
           h: 1080
         },
