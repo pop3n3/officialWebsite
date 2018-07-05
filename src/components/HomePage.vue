@@ -17,13 +17,14 @@
     <p v-if="show1" class="font2" :key="2">保持初心 精益求精</p>
     </transition-group>
     <table class="content1Table" cellpadding="0" cellspacing="0">
-      <transition name="fade">
-      <tr v-if="show2">
+      <!-- <transition name="fade"> -->
+      <!-- <tr v-if="show2"> -->
+      <tr>
       <td v-for="item in coreitems" :key="item.id">
         <progressive-img class="coreItemImg" v-bind:src="item.url" :placeholder="item.placeholder"/>
       </td>
       </tr>
-      </transition>
+      <!-- </transition> -->
       <tr>
          <td v-for="item in coreitems" :key="item.id"><p class="tr_td_p">{{item.desc}}</p></td>
       </tr>
@@ -70,7 +71,7 @@
     <div v-if="show4">合作伙伴</div>
     </transition>
     <transition name="slidefade">
-    <progressive-img class="partnerImg" v-if="show5" :src="partnerImg.src" :placeholder="partnerImg.placeholder"/>
+    <img class="partnerImg" v-if="show5" :src="partnerImg.src">
     </transition>
   </div>
   <div class="contactus">
@@ -178,9 +179,9 @@ export default {
   },
   methods: {
     computeBgHeight: function () {
-      var clientHeight = document.documentElement.clientHeight
+      var clientWidth = document.documentElement.clientWidth
       let diff = 40 + 67
-      var rs = clientHeight - diff
+      var rs = clientWidth * 1103.0 / 1900.0 - diff
       this.bgMinHeight = rs + 'px'
     },
     scrollf: function () {
@@ -289,7 +290,7 @@ export default {
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 3.0s;
+  transition: opacity 4.8s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
@@ -447,7 +448,7 @@ export default {
   color:#21184a;
   font-size: 64px;
   margin-top:60px;
-  margin-bottom: -75px;
+  margin-bottom: -15px;
 }
 .contactus{
   height:390px;
