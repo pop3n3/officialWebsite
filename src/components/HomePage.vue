@@ -113,7 +113,7 @@ export default {
     return {
       bgMinHeight: 0 + 'px',
       parallaxSpeed: 0.1,
-      imgPosition: '50% 100%',
+      imgPosition: '50% 50%',
       bgUrl: {
         src: '/static/homePage/homeBg.jpg',
         placeholder: '/static/homePage/placeholder/homeBg.jpg'
@@ -180,8 +180,7 @@ export default {
   methods: {
     computeBgHeight: function () {
       var clientWidth = document.documentElement.clientWidth
-      let diff = 40 + 67
-      var rs = clientWidth * 1103.0 / 1900.0 - diff
+      var rs = clientWidth * 1103.0 / 1900.0
       this.bgMinHeight = rs + 'px'
     },
     scrollf: function () {
