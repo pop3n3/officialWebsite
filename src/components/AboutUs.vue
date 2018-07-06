@@ -107,7 +107,7 @@ export default {
       title1: '/static/show/title1.png',
       show1: false,
       items: [
-        {image: '/static/about/1.png', width: 896.0},
+        {image: '/static/about/1.jpg', width: 899.0},
         {image: '/static/about/2.jpg', width: 799.0},
         {image: '/static/about/3.jpg', width: 799.0},
         {image: '/static/about/4.jpg', width: 449.0},
