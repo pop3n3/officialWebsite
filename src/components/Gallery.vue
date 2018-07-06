@@ -9,10 +9,10 @@
     <div class="oneshow2">
       <img :src="now">
     </div>
-    <table class="oneshow3" align="center" cellspacing="100">
+    <table class="oneshow3" align="center" cellspacing="50">
     <tr>
       <td style="height:30%;width:500px;letter-spacing:1px;">
-      <p style="height:30%;width:80%;margin-left:20%;margin-top:-15px;font-size: 17px;" >典致网络专业提供美术外包服务，为每位客户提供全方位的美术解决方案。我们在大型3D客户端游戏，三渲二页游，以及手机游戏领域有着丰富的美术制作经验和成功案例；公司在短时间内就参与了众多成功游戏的开发，并与众多游戏公司建立了良好的合作关系。团队成员均在行业有着多年从业经验，在项目经验和基础素质方面无可替代！<br>美术风格涵盖：日韩、欧美、Q版、写实、现代等，无论是2D还是3D，或是动作、特效，我们团队都竭力奉献自己的能量，帮助客户在美术环节达到最佳的视觉呈现效果。
+      <p style="height:30%;width:80%;margin-left:20%;margin-top:-30px;font-size: 17px;" >典致网络专业提供美术外包服务，为每位客户提供全方位的美术解决方案。我们在大型3D客户端游戏，三渲二页游，以及手机游戏领域有着丰富的美术制作经验和成功案例；公司在短时间内就参与了众多成功游戏的开发，并与众多游戏公司建立了良好的合作关系。团队成员均在行业有着多年从业经验，在项目经验和基础素质方面无可替代！<br>美术风格涵盖：日韩、欧美、Q版、写实、现代等，无论是2D还是3D，或是动作、特效，我们团队都竭力奉献自己的能量，帮助客户在美术环节达到最佳的视觉呈现效果。
       </p>
       </td>
       <td style="width:500px;" >
