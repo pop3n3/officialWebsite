@@ -104,7 +104,7 @@ export default {
   },
   data () {
     return {
-      title1: '/static/show/title1.png',
+      title1: '/static/show/title1.jpg',
       show1: false,
       items: [
         {image: '/static/about/1.jpg', width: 899.0},
