@@ -134,14 +134,14 @@ export default {
         {
           src: '/static/show/big/p11.jpg',
           url: '/static/show/small/p11.jpg',
-          w: 1920,
-          h: 1080
+          w: 2560,
+          h: 1182
         },
         {
           src: '/static/show/big/p12.jpg',
           url: '/static/show/small/p12.jpg',
-          w: 1920,
-          h: 1080
+          w: 1024,
+          h: 1201
         },
         {
           src: '/static/show/big/p13.jpg',
